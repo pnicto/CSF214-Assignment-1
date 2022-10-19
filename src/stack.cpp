@@ -10,11 +10,13 @@ void Stack::resizeArray() {
   delete[] tempStackElements;
 }
 
-Stack::Stack(void) {
+Stack::Stack() {
   stackElements = new char[1]{};
   max = 1;
   top = -1;
 }
+
+Stack::~Stack() { delete[] stackElements; }
 
 void Stack::push(char element) {
   if (top >= max - 1) {

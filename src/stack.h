@@ -1,4 +1,5 @@
 #pragma once
+
 #include <iostream>
 
 class Stack {
@@ -10,7 +11,8 @@ class Stack {
   void resizeArray();
 
  public:
-  Stack(void);
+  Stack();
+  ~Stack();
 
   void push(char element);
 

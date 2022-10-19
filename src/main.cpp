@@ -1,6 +1,6 @@
 #include "main.h"
 
-int main(void) {
+int main() {
   Stack myStack{};
 
   return 0;

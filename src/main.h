@@ -4,4 +4,4 @@
 
 #include "stack.h"
 
-int main(void);
+int main();
