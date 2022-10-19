@@ -7,11 +7,11 @@ OBJ      := $(patsubst src/%.cpp,build/%.o,$(CPPFILES))
 MAKE_DIR = @mkdir -p $(@D)
 
 CFLAGS = -std=c++20         \
-		#  -g                 \
-		#  -Wall              \
-		#  -Wextra            \
-		#  -Werror            \
-		#  -pedantic-errors
+		 -g                 \
+		 -Wall              \
+		 -Wextra            \
+		 -Werror            \
+		 -pedantic-errors
 
 EXECUTABLE = build/main
 
