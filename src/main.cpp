@@ -21,6 +21,10 @@ int main() {
   std::string infixExpression = parseTreeToInfix(binaryTree);
   std::cout << "Infix Expression:" << infixExpression << '\n';
 
+  // Task 5
+  bool truthValue = evaluateTreeTruthValue(binaryTree);
+  std::cout << "Truth value: " << ((truthValue) ? "True" : "False") << '\n';
+
   // Task 4
   int height = treeHeight(*binaryTree);
   std::cout << "Height:" << height << '\n';
