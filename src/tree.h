@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <iostream>
 #include <string>
+#include <unordered_map>
 
 class ParseTree {
  private:
@@ -31,3 +32,7 @@ int treeHeight(ParseTree binaryTree);
 
 std::string parseTreeToInfix(ParseTree *nodePtr);
 void inOrderTraversal(ParseTree *nodePtr);
+
+bool getNodeTruthValue(ParseTree *nodePtr,
+                       std::unordered_map<char, bool> *hashPtr);
+bool evaluateTreeTruthValue(ParseTree *nodePtr);

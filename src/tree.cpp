@@ -92,3 +92,52 @@ std::string parseTreeToInfix(ParseTree *nodePtr) {
   inOrderTraversal(nodePtr, &infixFormula);
   return infixFormula;
 }
+
+// For use in evaluateTreeTruthValue()
+bool getNodeTruthValue(ParseTree *nodePtr,
+                       std::unordered_map<char, bool> *hashPtr) {
+  switch (nodePtr->getValue()) {
+    case '+':
+      return (getNodeTruthValue(nodePtr->getLeftNode(nodePtr), hashPtr) ||
+              getNodeTruthValue(nodePtr->getRightNode(nodePtr), hashPtr));
+      break;
+    case '*':
+      return (getNodeTruthValue(nodePtr->getLeftNode(nodePtr), hashPtr) &&
+              getNodeTruthValue(nodePtr->getRightNode(nodePtr), hashPtr));
+      break;
+    case '>':
+      return (!getNodeTruthValue(nodePtr->getLeftNode(nodePtr), hashPtr) ||
+              getNodeTruthValue(nodePtr->getRightNode(nodePtr), hashPtr));
+      break;
+    case '~':
+      return (!getNodeTruthValue(nodePtr->getRightNode(nodePtr), hashPtr));
+      break;
+    default:
+      if ((*hashPtr).find(nodePtr->getValue()) != (*hashPtr).end())
+        return (*hashPtr)[nodePtr->getValue()];
+      else {
+        char truthVal{};
+        std::cout
+            << "Please enter the truth value (T/F) for propositional atom '"
+            << nodePtr->getValue() << "': ";
+        std::cin >> truthVal;
+        if (truthVal == 'T' || truthVal == 't') {
+          (*hashPtr)[nodePtr->getValue()] = true;
+          return true;
+        } else if (truthVal == 'F' || truthVal == 'f') {
+          (*hashPtr)[nodePtr->getValue()] = false;
+          return false;
+        } else {
+          std::cout << "\nUnknown value entered, assumed to be False\n";
+          return false;
+        }
+      }
+      break;
+  }
+}
+
+// Task 5 solution
+bool evaluateTreeTruthValue(ParseTree *nodePtr) {
+  std::unordered_map<char, bool> atomTruthVals;
+  return getNodeTruthValue(nodePtr, &atomTruthVals);
+}
