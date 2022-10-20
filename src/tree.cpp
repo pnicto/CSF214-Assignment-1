@@ -61,8 +61,8 @@ ParseTree *prefixToParseTree(std::string prefixFormula) {
 }
 
 // Task 4 solution
-int treeHeight(ParseTree binaryTree) {
-  int height = getHeight(&binaryTree);
+int treeHeight(ParseTree *binaryTree) {
+  int height = getHeight(binaryTree);
   return height;
 }
 
