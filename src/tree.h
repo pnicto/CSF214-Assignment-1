@@ -23,8 +23,11 @@ class ParseTree {
   void setRightNode(ParseTree *node);
 };
 
-ParseTree* prefixToParseTree(std::string prefixFormula);
+ParseTree *prefixToParseTree(std::string prefixFormula);
 ParseTree *createTree(std::string::iterator *valuePtr,
                       std::string::iterator endPtr);
 void printBT(const std::string &prefix, ParseTree *node, bool isLeft);
 int treeHeight(ParseTree binaryTree);
+
+std::string parseTreeToInfix(ParseTree *nodePtr);
+void inOrderTraversal(ParseTree *nodePtr);

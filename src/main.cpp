@@ -17,6 +17,10 @@ int main() {
   ParseTree* binaryTree = prefixToParseTree(prefixFormula);
   printBT("", binaryTree, true);
 
+  // Task 3
+  std::string infixExpression = parseTreeToInfix(binaryTree);
+  std::cout << "Infix Expression:" << infixExpression << '\n';
+
   // Task 4
   int height = treeHeight(*binaryTree);
   std::cout << "Height:" << height << '\n';

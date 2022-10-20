@@ -1,11 +1,13 @@
 #include "tree.h"
 
+// Constructor for Parse Tree
 ParseTree::ParseTree(char character) {
   value = character;
   leftNode = nullptr;
   rightNode = nullptr;
 }
 
+// Destructor for Parse Tree
 ParseTree::~ParseTree() {
   if (leftNode != nullptr) {
     delete leftNode;
@@ -15,6 +17,7 @@ ParseTree::~ParseTree() {
   }
 }
 
+// Getters for Parse Tree
 char ParseTree::getValue() { return value; }
 ParseTree *ParseTree::getLeftNode(ParseTree *node) { return node->leftNode; }
 ParseTree *ParseTree::getRightNode(ParseTree *node) { return node->rightNode; }
@@ -24,9 +27,11 @@ int getHeight(ParseTree *node) {
                       getHeight(node->getRightNode(node)));
 }
 
+// Setters for Parse Tree
 void ParseTree::setLeftNode(ParseTree *node) { leftNode = node; }
 void ParseTree::setRightNode(ParseTree *node) { rightNode = node; }
 
+// For use in prefixToParseTree()
 ParseTree *createTree(std::string::iterator *valuePtr,
                       std::string::iterator endPtr) {
   if (*valuePtr == endPtr) return nullptr;
@@ -47,16 +52,20 @@ ParseTree *createTree(std::string::iterator *valuePtr,
   return node;
 }
 
-ParseTree* prefixToParseTree(std::string prefixFormula) {
+// Task 2 solution
+ParseTree *prefixToParseTree(std::string prefixFormula) {
   std::string::iterator characterPtr = prefixFormula.begin();
   std::string::iterator endPtr = prefixFormula.end();
-  ParseTree* tree = createTree(&characterPtr, endPtr);
+  ParseTree *tree = createTree(&characterPtr, endPtr);
   return tree;
 }
+
+// Task 4 solution
 int treeHeight(ParseTree binaryTree) {
   int height = getHeight(&binaryTree);
   return height;
 }
+
 void printBT(const std::string &prefix, ParseTree *node, bool isLeft) {
   if (node != nullptr) {
     std::cout << prefix;
@@ -66,4 +75,20 @@ void printBT(const std::string &prefix, ParseTree *node, bool isLeft) {
     printBT(prefix + (isLeft ? "│   " : "    "), node->getRightNode(node),
             false);
   }
+}
+
+// For use in parseTreeToInfix()
+void inOrderTraversal(ParseTree *nodePtr, std::string *infixFormulaPtr) {
+  if (nodePtr->getLeftNode(nodePtr) != nullptr)
+    inOrderTraversal(nodePtr->getLeftNode(nodePtr), infixFormulaPtr);
+  infixFormulaPtr->push_back(nodePtr->getValue());
+  if (nodePtr->getRightNode(nodePtr) != nullptr)
+    inOrderTraversal(nodePtr->getRightNode(nodePtr), infixFormulaPtr);
+}
+
+// Task 3 solution
+std::string parseTreeToInfix(ParseTree *nodePtr) {
+  std::string infixFormula = "";
+  inOrderTraversal(nodePtr, &infixFormula);
+  return infixFormula;
 }
