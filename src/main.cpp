@@ -1,6 +1,7 @@
 #include "main.h"
 
 #include "conversions.h"
+#include "tree.h"
 
 int main() {
   std::string infixFormula;
@@ -12,5 +13,14 @@ int main() {
   std::string prefixFormula = infixToPrefix(infixFormula);
   std::cout << "Prefix Formula: " << prefixFormula << '\n';
 
+  // Task 2
+  ParseTree* binaryTree = prefixToParseTree(prefixFormula);
+  printBT("", binaryTree, true);
+
+  // Task 4
+  int height = treeHeight(*binaryTree);
+  std::cout << "Height:" << height << '\n';
+
+  delete binaryTree;
   return 0;
 }
