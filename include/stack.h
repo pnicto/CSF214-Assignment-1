@@ -1,7 +1,6 @@
 /*!
  * @file stack.h
  * @brief Header file for stack
- * @version 0.1
  * @date 21-10-2022
  *
  * @copyright Copyright (c) 2022
@@ -34,50 +33,22 @@ class Stack {
    * @brief Maximum elements the stack can store
    *
    */
-  int max{};
+  int maxElements{};
 
   /*!
-   * @brief Index
+   * @brief Index of the stack
    *
    */
-  int top{};
+  int idx{};
 
-  /*!
-   * @brief Resizes the stack array dynamically
-   *
-   */
   void resizeArray();
 
  public:
-  /*!
-   * @brief Construct a new Stack object
-   *
-   */
   Stack();
-
-  /*!
-   * @brief Destroy the Stack object
-   *
-   */
   ~Stack();
 
-  /*!
-   * @brief Adds the element to the stack
-   *
-   * @param element
-   */
   void push(char element);
-
-  /*!
-   * @brief Returns the element at the top from stack
-   *
-   * @return char
-   */
   char pop();
 
-  /*!
-   * @brief Prints stack
-   *
-   */
   void printStack();
 };

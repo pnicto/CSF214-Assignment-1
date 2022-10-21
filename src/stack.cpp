@@ -1,7 +1,6 @@
 /*!
  * @file stack.cpp
  * @brief Source file for stack
- * @version 0.1
  * @date 21-10-2022
  *
  * @copyright Copyright (c) 2022
@@ -9,44 +8,73 @@
  */
 #include "../include/stack.h"
 
+/*!
+ * @brief Resizes the stack array dynamically
+ *@details Assigns Stack::stackElements to Stack::tempStackElements and copies
+ *the elements in Stack::stackElements to Stack::tempStackElements while
+ *allocating new array with twice the size of old array to Stack::stackElements
+ */
 void Stack::resizeArray() {
   tempStackElements = stackElements;
-  stackElements = new char[max * 2]{};
-  for (int i = 0; i < max; i++) {
+  stackElements = new char[maxElements * 2]{};
+  for (int i = 0; i < maxElements; i++) {
     stackElements[i] = tempStackElements[i];
   }
-  max = 2 * max;
+  maxElements = 2 * maxElements;
   delete[] tempStackElements;
 }
 
+/*!
+ * @brief Construct a new Stack object
+ *@details A new instance of Stack will be created with Stack::stackElements
+ *being a char[1], Stack::idx being -1 and Stack::maxElements being 1
+ */
 Stack::Stack() {
   stackElements = new char[1]{};
-  max = 1;
-  top = -1;
+  maxElements = 1;
+  idx = -1;
 }
 
+/*!
+ * @brief Destroy the Stack object
+ *@details Destroys the allocated Stack::stackElements
+ */
 Stack::~Stack() { delete[] stackElements; }
 
+/*!
+ * @brief Adds the element to the stack
+ *
+ * @param element
+ */
 void Stack::push(char element) {
-  if (top >= max - 1) {
+  if (idx >= maxElements - 1) {
     resizeArray();
   }
-  top++;
-  stackElements[top] = element;
+  idx++;
+  stackElements[idx] = element;
 };
 
+/*!
+ * @brief Returns the element at the top from stack
+ *
+ * @return char
+ */
 char Stack::pop() {
-  if (top >= 0) {
-    char elementToBeReturned = stackElements[top];
-    stackElements[top] = 0;
-    top--;
+  if (idx >= 0) {
+    char elementToBeReturned = stackElements[idx];
+    stackElements[idx] = 0;
+    idx--;
     return elementToBeReturned;
   }
   return 0;
 }
 
+/*!
+ * @brief Prints the elements of the stack in bottom to top manner
+ *
+ */
 void Stack::printStack() {
-  for (int i = 0; i < max; i++) {
+  for (int i = 0; i < maxElements; i++) {
     std::cout << stackElements[i] << std::endl;
   }
 }
