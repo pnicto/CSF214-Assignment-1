@@ -31,5 +31,6 @@ int main() {
             << ((truthValue) ? "True" : "False") << '\n';
 
   delete binaryTree;
+
   return 0;
 }

@@ -19,8 +19,11 @@ ParseTree::~ParseTree() {
 
 // Getters for Parse Tree
 char ParseTree::getValue() { return value; }
+
 ParseTree *ParseTree::getLeftNode(ParseTree *node) { return node->leftNode; }
+
 ParseTree *ParseTree::getRightNode(ParseTree *node) { return node->rightNode; }
+
 int getHeight(ParseTree *node) {
   if (node == nullptr) return 0;
   return 1 + std::max(getHeight(node->getLeftNode(node)),
