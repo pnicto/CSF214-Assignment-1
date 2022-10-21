@@ -15,6 +15,7 @@
 
 /*!
  * @brief Class for parse tree
+ * @details Implments a rooted binary parse tree for a given propositional logic formula.
  *
  */
 class ParseTree {

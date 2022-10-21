@@ -1,6 +1,6 @@
 /*!
  * @file tree.cpp
- * @brief Source file for tree.cpp
+ * @brief Source file for tree
  * @date 21-10-2022
  *
  * @copyright Copyright (c) 2022
@@ -61,14 +61,14 @@ ParseTree *ParseTree::getRightNode(ParseTree *node) { return node->rightNode; }
 // Setters
 
 /*!
- * @brief Set the left node of a node to the given node
+ * @brief Set the left node of a given node
  *
  * @param node
  */
 void ParseTree::setLeftNode(ParseTree *node) { leftNode = node; }
 
 /*!
- * @brief Set the right node of a node to the given node
+ * @brief Set the right node of a given node
  *
  * @param node
  */

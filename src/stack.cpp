@@ -55,7 +55,7 @@ void Stack::push(char element) {
 };
 
 /*!
- * @brief Returns the element at the top from stack
+ * @brief Removes the element at the top of the stack and returns it
  *
  * @return char
  */
