@@ -1,4 +1,4 @@
-#include "tree.h"
+#include "../include/tree.h"
 
 // Constructor for Parse Tree
 ParseTree::ParseTree(char character) {

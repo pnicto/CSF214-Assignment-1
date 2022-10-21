@@ -1,4 +1,4 @@
-#include "conversions.h"
+#include "../include/conversions.h"
 
 std::string infixToPrefix(std::string infixFormula) {
   Stack operatorStack{};

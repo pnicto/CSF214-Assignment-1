@@ -1,7 +1,7 @@
-#include "main.h"
+#include "../include/main.h"
 
-#include "conversions.h"
-#include "tree.h"
+#include "../include/conversions.h"
+#include "../include/tree.h"
 
 int main() {
   std::string infixFormula;
