@@ -34,28 +34,20 @@ std::string infixToPrefix(std::string infixFormula) {
    */
   for (char character : infixFormula) {
     switch (character) {
-      case '~':
-        operatorStack.push(character);
-        break;
-
-      case '+':
-        operatorStack.push(character);
-        break;
-
-      case '*':
-        operatorStack.push(character);
-        break;
-
-      case '>':
-        operatorStack.push(character);
-        break;
-
         /*!
          * @details When '(' is the character in the reversed infix formula,
          * start popping the stack and add to the prefix formula until ')' else
          * add the character to operator stack
          *
          */
+      case '~':
+      case '+':
+      case '*':
+      case '>':
+      case ')':
+        operatorStack.push(character);
+        break;
+
       case '(':
         while (1) {
           char operatorToBeAdded = operatorStack.pop();
@@ -64,10 +56,6 @@ std::string infixToPrefix(std::string infixFormula) {
           else
             prefixFormula += operatorToBeAdded;
         }
-        break;
-
-      case ')':
-        operatorStack.push(character);
         break;
 
       /*!
