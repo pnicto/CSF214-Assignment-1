@@ -1,13 +1,29 @@
+/*!
+ * @file tree.cpp
+ * @brief Source file for tree.cpp
+ * @date 21-10-2022
+ *
+ * @copyright Copyright (c) 2022
+ *
+ */
 #include "../include/tree.h"
 
-// Constructor for Parse Tree
+/*!
+ * @brief Construct a new Parse Tree object which takes ParseTree::value
+ *@details Creates a new tree with ParseTree::leftNode and ParseTree::rightNode
+ *as nullptr
+ * @param character
+ */
 ParseTree::ParseTree(char character) {
   value = character;
   leftNode = nullptr;
   rightNode = nullptr;
 }
 
-// Destructor for Parse Tree
+/*!
+ * @brief Destroy the Parse Tree object
+ *
+ */
 ParseTree::~ParseTree() {
   if (leftNode != nullptr) {
     delete leftNode;
@@ -17,37 +33,73 @@ ParseTree::~ParseTree() {
   }
 }
 
-// Getters for Parse Tree
+// Getters
+
+/*!
+ * @brief Get the value of the node
+ *
+ * @return char
+ */
 char ParseTree::getValue() { return value; }
 
+/*!
+ * @brief Get the left node when a node is given
+ * @param node
+ * @details Returns the pointer to left node when a node is given
+ * @return ParseTree*
+ */
 ParseTree *ParseTree::getLeftNode(ParseTree *node) { return node->leftNode; }
 
+/*!
+ * @brief Get the right node when a node is given
+ * @param node
+ * @details Returns the pointer to right node when a node is given
+ * @return ParseTree*
+ */
 ParseTree *ParseTree::getRightNode(ParseTree *node) { return node->rightNode; }
 
-int getHeight(ParseTree *node) {
-  if (node == nullptr) return 0;
-  return 1 + std::max(getHeight(node->getLeftNode(node)),
-                      getHeight(node->getRightNode(node)));
-}
+// Setters
 
-// Setters for Parse Tree
+/*!
+ * @brief Set the left node of a node to the given node
+ *
+ * @param node
+ */
 void ParseTree::setLeftNode(ParseTree *node) { leftNode = node; }
+
+/*!
+ * @brief Set the right node of a node to the given node
+ *
+ * @param node
+ */
 void ParseTree::setRightNode(ParseTree *node) { rightNode = node; }
 
 // For use in prefixToParseTree()
-ParseTree *createTree(std::string::iterator *valuePtr,
-                      std::string::iterator endPtr) {
-  if (*valuePtr == endPtr) return nullptr;
-  ParseTree *node = new ParseTree{**valuePtr};
-  switch (*((*valuePtr)++)) {
+
+/*!
+ * @brief Takes in start and end pointers and generates a binary
+ * tree recursively
+ * @details For binary operators generates tree normally but for unary operator
+ * like "~" right node is created
+ * @param formulaStartPtr
+ * @param formulaEndPtr
+ * @return ParseTree*
+ */
+ParseTree *createParseTree(std::string::iterator *formulaStartPtr,
+                           std::string::iterator formulaEndPtr) {
+  if (*formulaStartPtr == formulaEndPtr) return nullptr;
+
+  ParseTree *node = new ParseTree{**formulaStartPtr};
+
+  switch (*((*formulaStartPtr)++)) {
     case '+':
     case '*':
     case '>':
-      node->setLeftNode(createTree(valuePtr, endPtr));
-      node->setRightNode(createTree(valuePtr, endPtr));
+      node->setLeftNode(createParseTree(formulaStartPtr, formulaEndPtr));
+      node->setRightNode(createParseTree(formulaStartPtr, formulaEndPtr));
       break;
     case '~':
-      node->setRightNode(createTree(valuePtr, endPtr));
+      node->setRightNode(createParseTree(formulaStartPtr, formulaEndPtr));
       break;
     default:
       break;
@@ -55,32 +107,49 @@ ParseTree *createTree(std::string::iterator *valuePtr,
   return node;
 }
 
-// Task 2 solution
+// Task 2
+
+/*!
+ * @brief Takes in a prefix formula and converts it into a rooted
+ * binary parse tree
+ *
+ * @param prefixFormula
+ * @return ParseTree*
+ */
 ParseTree *prefixToParseTree(std::string prefixFormula) {
   std::string::iterator characterPtr = prefixFormula.begin();
   std::string::iterator endPtr = prefixFormula.end();
-  ParseTree *tree = createTree(&characterPtr, endPtr);
-  return tree;
+  ParseTree *parseTree = createParseTree(&characterPtr, endPtr);
+  return parseTree;
 }
 
-// Task 4 solution
-int treeHeight(ParseTree *binaryTree) {
-  int height = getHeight(binaryTree);
-  return height;
-}
-
-void printBT(const std::string &prefix, ParseTree *node, bool isLeft) {
+/*!
+ * @brief Prints the binary tree
+ *
+ * @param prefix
+ * @param node
+ * @param isLeft boolean value to identify left or right nodes
+ */
+void printBinaryParseTree(const std::string &prefix, ParseTree *node,
+                          bool isLeft) {
   if (node != nullptr) {
     std::cout << prefix;
     std::cout << (isLeft ? "├──" : "└──");
     std::cout << node->getValue() << std::endl;
-    printBT(prefix + (isLeft ? "│   " : "    "), node->getLeftNode(node), true);
-    printBT(prefix + (isLeft ? "│   " : "    "), node->getRightNode(node),
-            false);
+    printBinaryParseTree(prefix + (isLeft ? "│   " : "    "),
+                         node->getLeftNode(node), true);
+    printBinaryParseTree(prefix + (isLeft ? "│   " : "    "),
+                         node->getRightNode(node), false);
   }
 }
 
-// For use in parseTreeToInfix()
+// Task 3
+
+/*!
+ * @brief Utility method which traverses the tree in in-order manner
+ *
+ * @param nodePtr
+ */
 void inOrderTraversal(ParseTree *nodePtr, std::string *infixFormulaPtr) {
   if (nodePtr->getLeftNode(nodePtr) != nullptr)
     inOrderTraversal(nodePtr->getLeftNode(nodePtr), infixFormulaPtr);
@@ -89,14 +158,54 @@ void inOrderTraversal(ParseTree *nodePtr, std::string *infixFormulaPtr) {
     inOrderTraversal(nodePtr->getRightNode(nodePtr), infixFormulaPtr);
 }
 
-// Task 3 solution
+/*!
+ * @brief Traverses the parse tree and return the infix formula
+ * @details Uses #inOrderTraversal to traverse
+ * @param nodePtr
+ * @return std::string infixFormula
+ */
 std::string parseTreeToInfix(ParseTree *nodePtr) {
   std::string infixFormula = "";
   inOrderTraversal(nodePtr, &infixFormula);
   return infixFormula;
 }
 
-// For use in evaluateTreeTruthValue()
+// Task 4
+
+/*!
+ * @brief Get the max height of the node
+ * @details Recursively calls itself to get the maximum height among the left
+ * tree and right node trees
+ * @param node
+ * @return int
+ */
+int getNodeHeight(ParseTree *node) {
+  if (node == nullptr) return 0;
+  return 1 + std::max(getNodeHeight(node->getLeftNode(node)),
+                      getNodeHeight(node->getRightNode(node)));
+}
+
+/*!
+ * @brief Calculate the height of the binary tree recursively
+ * @details Uses #getNodeHeight with entire tree as parameter
+ * @param binaryTree
+ * @return int
+ */
+int getBinaryTreeHeight(ParseTree *binaryTree) {
+  int height = getNodeHeight(binaryTree);
+  return height;
+}
+
+// Task 5
+
+/*!
+ * @brief Gets the truth value of a given node
+ *
+ * @param nodePtr
+ * @param hashPtr
+ * @return true
+ * @return false
+ */
 bool getNodeTruthValue(ParseTree *nodePtr,
                        std::unordered_map<char, bool> *hashPtr) {
   switch (nodePtr->getValue()) {
@@ -139,7 +248,14 @@ bool getNodeTruthValue(ParseTree *nodePtr,
   }
 }
 
-// Task 5 solution
+/*!
+ * @brief Evaluates the truth value of a given parse tree
+ * @details Uses #getNodeTruthValue to evaluate the truth value of a given parse
+ * tree
+ * @param nodePtr
+ * @return true
+ * @return false
+ */
 bool evaluateTreeTruthValue(ParseTree *nodePtr) {
   std::unordered_map<char, bool> atomTruthVals;
   return getNodeTruthValue(nodePtr, &atomTruthVals);
