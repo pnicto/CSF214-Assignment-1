@@ -115,7 +115,6 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Source file for conversions. </p>
-<dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>21-10-2022</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2022 </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
@@ -142,14 +141,14 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<p>Reverses the given infix formula and iterates through the formula pushing "+" , "*", "&gt;", "~", ")" into the stack while the remaining characters are added to prefix string variable until "(" is found. Then the stack is popped until ")" again adding the popped operators to the prefix string.</p>
 <dl class="section return"><dt>Returns</dt><dd>std::string prefixFormula </dd></dl>
-<p >Create operator stack</p>
-<p >Create empty prefix formula</p>
-<p >Reverse the formula as per the algorithm</p>
-<p >Iterate through the string and add the operators to stack</p>
-<p >When '(' is the character in the reversed infix formula, start popping the stack and add to the prefix formula until ')' else add the character to operator stack</p>
-<p >If the character is not an operator append it to the prefix string</p>
-<p >Reverse the prefix formula string created so far to get the desired result</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="conversions_8cpp_a32422df5e46274fb24a354222b40cea1_icgraph.svg" width="216" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>

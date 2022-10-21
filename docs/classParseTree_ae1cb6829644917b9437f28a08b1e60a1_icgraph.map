@@ -1,6 +1,11 @@
 <map id="ParseTree::getLeftNode" name="ParseTree::getLeftNode">
-<area shape="rect" id="node1" title="Get the Left node when a node is given." alt="" coords="424,67,597,93"/>
-<area shape="rect" id="node2" href="$tree_8cpp.html#aa0c28b938620dfeec544e2f97d6d04ea" title="Get the truth value of a given node." alt="" coords="229,29,376,56"/>
-<area shape="rect" id="node4" href="$tree_8cpp.html#a267afe61d4284c3fa8388b5590a8c560" title="Method which prints the binary tree." alt="" coords="268,104,337,131"/>
-<area shape="rect" id="node3" href="$tree_8cpp.html#a25643aa8241f085240d87644329f4656" title="Evaluates the truth value of a given parse tree." alt="" coords="5,29,181,56"/>
+<area shape="rect" id="node1" title="Get the left node when a node is given." alt="" coords="527,141,700,168"/>
+<area shape="rect" id="node2" href="$tree_8cpp.html#af018a1a010b6d8165c511b6ba72ec8b2" title="Get the max height of the node." alt="" coords="345,29,465,56"/>
+<area shape="rect" id="node5" href="$tree_8cpp.html#aa0c28b938620dfeec544e2f97d6d04ea" title="Gets the truth value of a given node." alt="" coords="332,104,479,131"/>
+<area shape="rect" id="node7" href="$tree_8cpp.html#aa2112d5255c2ad249f275f84a5c02181" title="Utility method which traverses the tree in in&#45;order manner." alt="" coords="340,179,471,205"/>
+<area shape="rect" id="node9" href="$tree_8cpp.html#a705609245a7281d7c1186f2097e53427" title="Prints the binary tree." alt="" coords="117,229,275,256"/>
+<area shape="rect" id="node3" href="$tree_8cpp.html#a547f3073058ac0de704fff6c21e4134c" title="Calculate the height of the binary tree recursively." alt="" coords="119,41,273,68"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Where the tasks are run." alt="" coords="5,129,60,156"/>
+<area shape="rect" id="node6" href="$tree_8cpp.html#a25643aa8241f085240d87644329f4656" title="Evaluates the truth value of a given parse tree." alt="" coords="108,104,284,131"/>
+<area shape="rect" id="node8" href="$tree_8cpp.html#abbc27d85ce3224d78c8b59f4744f76f5" title="Traverses the parse tree and return the infix formula." alt="" coords="132,155,260,181"/>
 </map>

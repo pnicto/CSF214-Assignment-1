@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['max_0',['max',['../classStack.html#a274c8ae965129deb431efcae07c84be1',1,'Stack']]]
+  ['leftnode_0',['leftNode',['../classParseTree.html#afcd203dbba8e8c752c5ac0c37df081aa',1,'ParseTree']]]
 ];

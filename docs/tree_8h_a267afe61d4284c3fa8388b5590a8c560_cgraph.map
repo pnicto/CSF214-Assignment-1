@@ -1,6 +1,0 @@
-<map id="printBT" name="printBT">
-<area shape="rect" id="node1" title="Method which prints the binary tree." alt="" coords="5,56,75,83"/>
-<area shape="rect" id="node2" href="$classParseTree.html#ae1cb6829644917b9437f28a08b1e60a1" title="Get the Left node when a node is given." alt="" coords="127,5,301,32"/>
-<area shape="rect" id="node3" href="$classParseTree.html#a101193b71bc7e02d051dd73e6f079aa1" title="Get the Right node when a node is given." alt="" coords="123,56,305,83"/>
-<area shape="rect" id="node4" href="$classParseTree.html#a816af779bb7d32b6ab6e513cf69648a4" title="Get the value of the node." alt="" coords="139,107,289,133"/>
-</map>

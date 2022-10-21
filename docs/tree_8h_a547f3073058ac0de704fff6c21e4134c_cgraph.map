@@ -1,0 +1,6 @@
+<map id="getBinaryTreeHeight" name="getBinaryTreeHeight">
+<area shape="rect" id="node1" title="Calculate the height of the binary tree recursively." alt="" coords="5,31,160,57"/>
+<area shape="rect" id="node2" href="$tree_8cpp.html#af018a1a010b6d8165c511b6ba72ec8b2" title="Get the max height of the node." alt="" coords="208,31,328,57"/>
+<area shape="rect" id="node3" href="$classParseTree.html#ae1cb6829644917b9437f28a08b1e60a1" title="Get the left node when a node is given." alt="" coords="381,5,554,32"/>
+<area shape="rect" id="node4" href="$classParseTree.html#a101193b71bc7e02d051dd73e6f079aa1" title="Get the right node when a node is given." alt="" coords="376,56,559,83"/>
+</map>

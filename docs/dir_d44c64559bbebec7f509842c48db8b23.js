@@ -1,7 +1,7 @@
 var dir_d44c64559bbebec7f509842c48db8b23 =
 [
     [ "conversions.h", "conversions_8h.html", "conversions_8h" ],
-    [ "main.h", "main_8h_source.html", null ],
+    [ "main.h", "main_8h.html", "main_8h" ],
     [ "stack.h", "stack_8h.html", [
       [ "Stack", "classStack.html", "classStack" ]
     ] ],

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['stackelements_0',['stackElements',['../classStack.html#a02a899696803a1f7950ee5eaf1cc615e',1,'Stack']]]
+  ['rightnode_0',['rightNode',['../classParseTree.html#ad969117a39f4bb6e033f81a19b2f70c6',1,'ParseTree']]]
 ];

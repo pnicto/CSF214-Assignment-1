@@ -1,5 +1,0 @@
-<map id="createTree" name="createTree">
-<area shape="rect" id="node1" title="Method which takes in start and end pointers and generates a binary tree recursively." alt="" coords="5,31,96,57"/>
-<area shape="rect" id="node2" href="$classParseTree.html#adf597d2ebd88e8275d7ac78b09d68ce4" title="Set the left node when a node is given." alt="" coords="149,5,321,32"/>
-<area shape="rect" id="node3" href="$classParseTree.html#a0effbd955454ab1beec9940cd6631dba" title="Set the right node when a node is given." alt="" coords="144,56,325,83"/>
-</map>
