@@ -27,7 +27,7 @@ run: $(EXECUTABLE) $(CPPFILES)
 debug: $(EXECUTABLE) $(CPPFILES)
 	${GDB} $(EXECUTABLE)
 
-build/%.o: src/%.cpp src/%.h
+build/%.o: src/%.cpp include/%.h
 	$(MAKE_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
