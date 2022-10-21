@@ -15,7 +15,7 @@ CFLAGS = -std=c++20         \
 
 EXECUTABLE = build/main
 
-.PHONY: clean
+.PHONY: clean docs
 
 .DEFAULT_GOAL = $(EXECUTABLE)
 
@@ -57,3 +57,6 @@ flame: cleaner all
 	./flame/stackcollapse-perf.pl ./logs/out.perf > ./logs/out.folded
 	./flame/flamegraph.pl ./logs/out.folded > ./logs/flame.svg
 	@echo Flame graph generated at ./logs/flame.svg
+
+docs:
+	doxygen Doxyfile
