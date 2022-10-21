@@ -49,3 +49,11 @@ valgrind:
 						--verbose \
 						--log-file=logs/valgrind-out.txt \
 						$(EXECUTABLE)
+
+flame: cleaner all
+	@[ -d "./flame" ] || (echo "FlameGraph repository not cloned, cloning...\n" && git clone https://github.com/brendangregg/FlameGraph.git flame)
+	sudo perf record -g -o ./logs/perf.data -F 999999999 ./build/main
+	sudo perf script -i ./logs/perf.data > ./logs/out.perf
+	./flame/stackcollapse-perf.pl ./logs/out.perf > ./logs/out.folded
+	./flame/flamegraph.pl ./logs/out.folded > ./logs/flame.svg
+	@echo Flame graph generated at ./logs/flame.svg
