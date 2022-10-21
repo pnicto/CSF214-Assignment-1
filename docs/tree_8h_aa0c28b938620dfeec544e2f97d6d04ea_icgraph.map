@@ -1,0 +1,4 @@
+<map id="getNodeTruthValue" name="getNodeTruthValue">
+<area shape="rect" id="node1" title="Get the truth value of a given node." alt="" coords="229,29,376,56"/>
+<area shape="rect" id="node2" href="$tree_8cpp.html#a25643aa8241f085240d87644329f4656" title="Evaluates the truth value of a given parse tree." alt="" coords="5,29,181,56"/>
+</map>
