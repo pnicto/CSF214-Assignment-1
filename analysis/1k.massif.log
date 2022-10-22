@@ -1,0 +1,1184 @@
+==85907== Massif, a heap profiler
+==85907== Copyright (C) 2003-2017, and GNU GPL'd, by Nicholas Nethercote
+==85907== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==85907== Command: ./build/main
+==85907== Parent PID: 80063
+==85907== 
+==85907== 
+--------------------------------------------------------------------------------
+Command:            ./build/main
+Massif arguments:   --heap=yes
+ms_print arguments: massif.out.85907
+--------------------------------------------------------------------------------
+
+
+    KB
+106.1^                                                                       #
+     |                                                                ::@@:::#
+     |                                                                ::@ : :#
+     |                                                               :::@ : :#
+     |                                                               :::@ : :#
+     |                                                           :::::::@ : :#
+     |                                               ::::::::@:@@:  ::::@ : :#
+     |                                             :::::::  :@:@ :  ::::@ : :#
+     |                                             : :::::  :@:@ :  ::::@ : :#
+     |                                             : :::::  :@:@ :  ::::@ : :#
+     |                                             : :::::  :@:@ :  ::::@ : :#
+     |                                             : :::::  :@:@ :  ::::@ : :#
+     |                                             : :::::  :@:@ :  ::::@ : :#
+     |                                             : :::::  :@:@ :  ::::@ : :#
+     |                                             : :::::  :@:@ :  ::::@ : :#
+     |                                             : :::::  :@:@ :  ::::@ : :#
+     |                                             : :::::  :@:@ :  ::::@ : :#
+     |                                             : :::::  :@:@ :  ::::@ : :#
+     |                                             : :::::  :@:@ :  ::::@ : :#
+     |                                             : :::::  :@:@ :  ::::@ : :#
+   0 +----------------------------------------------------------------------->Mi
+     0                                                                   3.506
+
+Number of snapshots: 72
+ Detailed snapshots: [15, 22, 42, 47 (peak), 48, 49, 59, 69]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1      2,317,003           72,712           72,704             8            0
+  2      2,437,670           76,816           76,800            16            0
+  3      2,451,936           76,952           76,921            31            0
+  4      2,461,736           77,080           77,041            39            0
+  5      2,480,664           77,320           77,281            39            0
+  6      2,517,527           78,304           78,242            62            0
+  7      2,517,879           77,800           77,761            39            0
+  8      2,591,222           79,744           79,682            62            0
+  9      2,591,622           78,760           78,721            39            0
+ 10      2,650,050           80,112           80,055            57            0
+ 11      2,650,486           80,136           80,056            80            0
+ 12      2,792,537           80,160           80,058           102            0
+ 13      2,804,061           80,248           80,183            65            0
+ 14      2,815,116           80,376           80,311            65            0
+ 15      2,830,655           80,896           80,823            73            0
+99.91% (80,823B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->89.87% (72,704B) 0x490B979: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+| ->89.87% (72,704B) 0x400647D: call_init.part.0 (dl-init.c:70)
+|   ->89.87% (72,704B) 0x4006567: call_init (dl-init.c:33)
+|     ->89.87% (72,704B) 0x4006567: _dl_init (dl-init.c:117)
+|       ->89.87% (72,704B) 0x40202E9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->05.06% (4,096B) 0x4B29C23: _IO_file_doallocate (filedoalloc.c:101)
+| ->05.06% (4,096B) 0x4B38D5F: _IO_doallocbuf (genops.c:347)
+|   ->05.06% (4,096B) 0x4B37D5B: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:485)
+|     ->05.06% (4,096B) 0x4B38E15: _IO_default_uflow (genops.c:362)
+|       ->05.06% (4,096B) 0x49736F0: __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|         ->05.06% (4,096B) 0x49817F5: std::istream::sentry::sentry(std::istream&, bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|           ->05.06% (4,096B) 0x49291A6: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|             ->05.06% (4,096B) 0x10C84B: main (main.cpp:26)
+|               
+->04.02% (3,255B) 0x10C7C8: __gnu_cxx::new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:127)
+| ->04.02% (3,255B) 0x10C52F: allocate (allocator.h:185)
+|   ->04.02% (3,255B) 0x10C52F: std::allocator_traits<std::allocator<char> >::allocate(std::allocator<char>&, unsigned long) (alloc_traits.h:464)
+|     ->04.02% (3,255B) 0x10C1B7: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) (basic_string.tcc:153)
+|       ->02.37% (1,921B) 0x10C355: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (basic_string.tcc:307)
+|       | ->02.37% (1,921B) 0x4929434: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|       |   ->02.37% (1,921B) 0x10C84B: main (main.cpp:26)
+|       |     
+|       ->01.65% (1,334B) 0x10CD8E: void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag) (basic_string.tcc:219)
+|         ->01.65% (1,334B) 0x10CCA9: void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct_aux<char*>(char*, char*, std::__false_type) (basic_string.h:255)
+|           ->01.65% (1,334B) 0x10CC3A: void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*) (basic_string.h:274)
+|             ->01.65% (1,334B) 0x10CB73: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (basic_string.h:459)
+|               ->01.65% (1,334B) 0x10C85E: main (main.cpp:29)
+|                 
+->00.95% (768B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 16      2,837,115           80,632           80,567            65            0
+ 17      2,852,921           80,672           80,598            74            0
+ 18      2,872,580           80,768           80,688            80            0
+ 19      2,897,182           81,032           80,929           103            0
+ 20      2,897,479           80,896           80,808            88            0
+ 21      2,946,321           81,400           81,289           111            0
+ 22      2,946,626           81,136           81,048            88            0
+99.89% (81,048B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->89.61% (72,704B) 0x490B979: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+| ->89.61% (72,704B) 0x400647D: call_init.part.0 (dl-init.c:70)
+|   ->89.61% (72,704B) 0x4006567: call_init (dl-init.c:33)
+|     ->89.61% (72,704B) 0x4006567: _dl_init (dl-init.c:117)
+|       ->89.61% (72,704B) 0x40202E9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->05.05% (4,096B) 0x4B29C23: _IO_file_doallocate (filedoalloc.c:101)
+| ->05.05% (4,096B) 0x4B38D5F: _IO_doallocbuf (genops.c:347)
+|   ->05.05% (4,096B) 0x4B37D5B: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:485)
+|     ->05.05% (4,096B) 0x4B38E15: _IO_default_uflow (genops.c:362)
+|       ->05.05% (4,096B) 0x49736F0: __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|         ->05.05% (4,096B) 0x49817F5: std::istream::sentry::sentry(std::istream&, bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|           ->05.05% (4,096B) 0x49291A6: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|             ->05.05% (4,096B) 0x10C84B: main (main.cpp:26)
+|               
+->04.60% (3,736B) 0x10C7C8: __gnu_cxx::new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:127)
+| ->04.60% (3,736B) 0x10C52F: allocate (allocator.h:185)
+|   ->04.60% (3,736B) 0x10C52F: std::allocator_traits<std::allocator<char> >::allocate(std::allocator<char>&, unsigned long) (alloc_traits.h:464)
+|     ->04.60% (3,736B) 0x10C1B7: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) (basic_string.tcc:153)
+|       ->02.96% (2,402B) 0x10C355: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (basic_string.tcc:307)
+|       | ->02.37% (1,921B) 0x4929434: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|       | | ->02.37% (1,921B) 0x10C84B: main (main.cpp:26)
+|       | |   
+|       | ->00.59% (481B) in 1+ places, all below ms_print's threshold (01.00%)
+|       | 
+|       ->01.64% (1,334B) 0x10CD8E: void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag) (basic_string.tcc:219)
+|         ->01.64% (1,334B) 0x10CCA9: void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct_aux<char*>(char*, char*, std::__false_type) (basic_string.h:255)
+|           ->01.64% (1,334B) 0x10CC3A: void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*) (basic_string.h:274)
+|             ->01.64% (1,334B) 0x10CB73: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (basic_string.h:459)
+|               ->01.64% (1,334B) 0x10C85E: main (main.cpp:29)
+|                 
+->00.63% (512B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 23      3,043,993           82,120           82,009           111            0
+ 24      3,044,345           81,616           81,528            88            0
+ 25      3,190,713           81,096           81,016            80            0
+ 26      3,203,635           82,704           81,718           986            0
+ 27      3,222,027           86,224           83,830         2,394            0
+ 28      3,232,477           88,224           85,030         3,194            0
+ 29      3,242,927           90,224           86,230         3,994            0
+ 30      3,253,377           92,224           87,430         4,794            0
+ 31      3,263,827           94,224           88,630         5,594            0
+ 32      3,274,277           96,224           89,830         6,394            0
+ 33      3,284,727           98,224           91,030         7,194            0
+ 34      3,295,177          100,224           92,230         7,994            0
+ 35      3,305,627          102,224           93,430         8,794            0
+ 36      3,316,077          104,224           94,630         9,594            0
+ 37      3,331,125          107,104           96,358        10,746            0
+ 38      3,349,803          106,496           95,751        10,745            0
+ 39      3,359,080          106,560           95,811        10,749            0
+ 40      3,376,977          106,688           95,931        10,757            0
+ 41      3,411,797          107,192           96,412        10,780            0
+ 42      3,412,102          106,928           96,171        10,757            0
+89.94% (96,171B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->67.99% (72,704B) 0x490B979: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+| ->67.99% (72,704B) 0x400647D: call_init.part.0 (dl-init.c:70)
+|   ->67.99% (72,704B) 0x4006567: call_init (dl-init.c:33)
+|     ->67.99% (72,704B) 0x4006567: _dl_init (dl-init.c:117)
+|       ->67.99% (72,704B) 0x40202E9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->14.97% (16,008B) 0x10D33D: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:92)
+| ->07.47% (7,992B) 0x10D3A7: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:98)
+| | ->07.45% (7,968B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | ->07.43% (7,944B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | ->07.41% (7,920B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | ->07.38% (7,896B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | ->07.36% (7,872B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | ->07.34% (7,848B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | ->07.32% (7,824B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | ->07.29% (7,800B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | ->07.27% (7,776B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | ->07.25% (7,752B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | ->07.23% (7,728B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | ->07.20% (7,704B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | ->07.18% (7,680B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | ->07.16% (7,656B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | ->07.14% (7,632B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | ->07.12% (7,608B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | ->07.09% (7,584B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | ->07.07% (7,560B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | ->07.05% (7,536B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | ->07.03% (7,512B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | ->07.00% (7,488B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | ->06.98% (7,464B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | ->06.96% (7,440B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | ->06.94% (7,416B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | ->06.91% (7,392B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | ->06.89% (7,368B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | ->06.87% (7,344B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | ->06.85% (7,320B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | 
+| | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | 
+| | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | 
+| | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | 
+| | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | 
+| | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | 
+| | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | 
+| | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | 
+| | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | 
+| | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | 
+| | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | 
+| | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | 
+| | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | 
+| ->07.47% (7,992B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | ->07.45% (7,968B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | ->07.43% (7,944B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | ->07.41% (7,920B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | ->07.38% (7,896B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | ->07.36% (7,872B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | ->07.34% (7,848B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | ->07.32% (7,824B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | ->07.29% (7,800B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | ->07.27% (7,776B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | ->07.25% (7,752B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | ->07.23% (7,728B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | ->07.20% (7,704B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | ->07.18% (7,680B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | ->07.16% (7,656B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | ->07.14% (7,632B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | ->07.12% (7,608B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | ->07.09% (7,584B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | ->07.07% (7,560B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | ->07.05% (7,536B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | ->07.03% (7,512B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | ->07.00% (7,488B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | ->06.98% (7,464B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | ->06.96% (7,440B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | ->06.94% (7,416B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | ->06.91% (7,392B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | ->06.89% (7,368B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | ->06.87% (7,344B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | ->06.85% (7,320B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | 
+| | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | 
+| | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | 
+| | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | 
+| | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | 
+| | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | 
+| | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | 
+| | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | 
+| | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | 
+| | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | 
+| | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | 
+| | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | 
+| | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | 
+| ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->03.83% (4,096B) 0x4B29C23: _IO_file_doallocate (filedoalloc.c:101)
+| ->03.83% (4,096B) 0x4B38D5F: _IO_doallocbuf (genops.c:347)
+|   ->03.83% (4,096B) 0x4B37D5B: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:485)
+|     ->03.83% (4,096B) 0x4B38E15: _IO_default_uflow (genops.c:362)
+|       ->03.83% (4,096B) 0x49736F0: __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|         ->03.83% (4,096B) 0x49817F5: std::istream::sentry::sentry(std::istream&, bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|           ->03.83% (4,096B) 0x49291A6: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|             ->03.83% (4,096B) 0x10C84B: main (main.cpp:26)
+|               
+->03.15% (3,363B) 0x10C7C8: __gnu_cxx::new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:127)
+| ->03.15% (3,363B) 0x10C52F: allocate (allocator.h:185)
+|   ->03.15% (3,363B) 0x10C52F: std::allocator_traits<std::allocator<char> >::allocate(std::allocator<char>&, unsigned long) (alloc_traits.h:464)
+|     ->03.15% (3,363B) 0x10C1B7: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) (basic_string.tcc:153)
+|       ->03.15% (3,363B) 0x10C355: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (basic_string.tcc:307)
+|       | ->01.80% (1,921B) 0x4929434: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|       | | ->01.80% (1,921B) 0x10C84B: main (main.cpp:26)
+|       | |   
+|       | ->01.35% (1,442B) 0x10C027: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::push_back(char) (basic_string.h:1345)
+|       |   ->01.35% (1,442B) in 2 places, all below massif's threshold (1.00%)
+|       |     
+|       ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|       
+->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 43      3,481,362          107,912           97,132        10,780            0
+ 44      3,481,714          107,408           96,651        10,757            0
+ 45      3,598,172          108,440           97,675        10,765            0
+ 46      3,613,784          108,464           97,691        10,773            0
+ 47      3,624,928          108,608           97,811        10,797            0
+90.06% (97,811B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->66.94% (72,704B) 0x490B979: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+| ->66.94% (72,704B) 0x400647D: call_init.part.0 (dl-init.c:70)
+|   ->66.94% (72,704B) 0x4006567: call_init (dl-init.c:33)
+|     ->66.94% (72,704B) 0x4006567: _dl_init (dl-init.c:117)
+|       ->66.94% (72,704B) 0x40202E9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->14.74% (16,008B) 0x10D33D: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:92)
+| ->07.36% (7,992B) 0x10D3A7: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:98)
+| | ->07.34% (7,968B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | ->07.31% (7,944B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | ->07.29% (7,920B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | ->07.27% (7,896B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | ->07.25% (7,872B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | ->07.23% (7,848B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | ->07.20% (7,824B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | ->07.18% (7,800B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | ->07.16% (7,776B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | ->07.14% (7,752B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | ->07.12% (7,728B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | ->07.09% (7,704B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | ->07.07% (7,680B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | ->07.05% (7,656B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | ->07.03% (7,632B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | ->07.01% (7,608B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | ->06.98% (7,584B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | ->06.96% (7,560B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | ->06.94% (7,536B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | ->06.92% (7,512B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | ->06.89% (7,488B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | ->06.87% (7,464B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | ->06.85% (7,440B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | ->06.83% (7,416B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | ->06.81% (7,392B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | ->06.78% (7,368B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | ->06.76% (7,344B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | ->06.74% (7,320B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | 
+| | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | 
+| | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | 
+| | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | 
+| | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | 
+| | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | 
+| | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | 
+| | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | 
+| | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | 
+| | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | 
+| | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | 
+| | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | 
+| | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | 
+| ->07.36% (7,992B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | ->07.34% (7,968B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | ->07.31% (7,944B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | ->07.29% (7,920B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | ->07.27% (7,896B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | ->07.25% (7,872B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | ->07.23% (7,848B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | ->07.20% (7,824B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | ->07.18% (7,800B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | ->07.16% (7,776B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | ->07.14% (7,752B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | ->07.12% (7,728B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | ->07.09% (7,704B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | ->07.07% (7,680B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | ->07.05% (7,656B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | ->07.03% (7,632B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | ->07.01% (7,608B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | ->06.98% (7,584B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | ->06.96% (7,560B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | ->06.94% (7,536B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | ->06.92% (7,512B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | ->06.89% (7,488B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | ->06.87% (7,464B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | ->06.85% (7,440B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | ->06.83% (7,416B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | ->06.81% (7,392B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | ->06.78% (7,368B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | ->06.76% (7,344B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | ->06.74% (7,320B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | 
+| | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | 
+| | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | 
+| | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | 
+| | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | 
+| | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | 
+| | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | 
+| | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | 
+| | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | 
+| | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | 
+| | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | 
+| | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | 
+| | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | 
+| ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->04.71% (5,120B) 0x4B29C23: _IO_file_doallocate (filedoalloc.c:101)
+| ->04.71% (5,120B) 0x4B38D5F: _IO_doallocbuf (genops.c:347)
+|   ->03.77% (4,096B) 0x4B37D5B: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:485)
+|   | ->03.77% (4,096B) 0x4B38E15: _IO_default_uflow (genops.c:362)
+|   |   ->03.77% (4,096B) 0x49736F0: __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|   |     ->03.77% (4,096B) 0x49817F5: std::istream::sentry::sentry(std::istream&, bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|   |       ->03.77% (4,096B) 0x49291A6: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|   |         ->03.77% (4,096B) 0x10C84B: main (main.cpp:26)
+|   |           
+|   ->00.94% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->03.54% (3,843B) 0x10C7C8: __gnu_cxx::new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:127)
+| ->03.54% (3,843B) 0x10C52F: allocate (allocator.h:185)
+|   ->03.54% (3,843B) 0x10C52F: std::allocator_traits<std::allocator<char> >::allocate(std::allocator<char>&, unsigned long) (alloc_traits.h:464)
+|     ->03.54% (3,843B) 0x10C1B7: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) (basic_string.tcc:153)
+|       ->03.54% (3,843B) 0x10C355: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (basic_string.tcc:307)
+|       | ->01.77% (1,922B) 0x10C027: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::push_back(char) (basic_string.h:1345)
+|       | | ->01.77% (1,922B) in 2 places, all below massif's threshold (1.00%)
+|       | |   
+|       | ->01.77% (1,921B) 0x4929434: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|       |   ->01.77% (1,921B) 0x10C84B: main (main.cpp:26)
+|       |     
+|       ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|       
+->00.13% (136B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 48      3,642,109          100,160           92,707         7,453            0
+92.56% (92,707B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->72.59% (72,704B) 0x490B979: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+| ->72.59% (72,704B) 0x400647D: call_init.part.0 (dl-init.c:70)
+|   ->72.59% (72,704B) 0x4006567: call_init (dl-init.c:33)
+|     ->72.59% (72,704B) 0x4006567: _dl_init (dl-init.c:117)
+|       ->72.59% (72,704B) 0x40202E9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->11.02% (11,040B) 0x10D33D: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:92)
+| ->07.98% (7,992B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | ->07.96% (7,968B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | ->07.93% (7,944B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | ->07.91% (7,920B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | ->07.88% (7,896B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | ->07.86% (7,872B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | ->07.84% (7,848B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | ->07.81% (7,824B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | ->07.79% (7,800B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | ->07.76% (7,776B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | ->07.74% (7,752B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | ->07.72% (7,728B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | ->07.69% (7,704B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | ->07.67% (7,680B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | ->07.64% (7,656B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | ->07.62% (7,632B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | ->07.60% (7,608B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | ->07.57% (7,584B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | ->07.55% (7,560B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | ->07.52% (7,536B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | ->07.50% (7,512B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | ->07.48% (7,488B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | ->07.45% (7,464B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | ->07.43% (7,440B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | ->07.40% (7,416B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | ->07.38% (7,392B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | ->07.36% (7,368B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | ->07.33% (7,344B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | ->07.31% (7,320B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | 
+| | | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | 
+| | | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | 
+| | | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | 
+| | | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | 
+| | | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | 
+| | | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | 
+| | | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | 
+| | | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | 
+| | | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | 
+| | | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | 
+| | | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | 
+| | ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | 
+| ->03.02% (3,024B) 0x10D3A7: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:98)
+| | ->03.02% (3,024B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | ->03.02% (3,024B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | ->03.02% (3,024B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | ->03.02% (3,024B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | ->03.02% (3,024B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | ->03.02% (3,024B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | ->03.02% (3,024B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | ->03.02% (3,024B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | ->03.02% (3,024B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | ->03.02% (3,024B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | ->03.02% (3,024B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | ->03.02% (3,024B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | ->03.02% (3,024B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | ->03.02% (3,024B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | ->03.02% (3,024B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | ->03.02% (3,024B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | ->03.02% (3,024B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | ->03.02% (3,024B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | ->03.02% (3,024B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | ->03.02% (3,024B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | ->03.02% (3,024B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | ->03.02% (3,024B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | ->03.02% (3,024B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | ->03.02% (3,024B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | ->03.02% (3,024B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | ->03.02% (3,024B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | ->03.02% (3,024B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | ->03.02% (3,024B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | 
+| | | | | | | | | | | | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | 
+| | | | | | | | | | | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | 
+| | | | | | | | | | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | 
+| | | | | | | | | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | 
+| | | | | | | | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | 
+| | | | | | | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | 
+| | | | | | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | 
+| | | | | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | 
+| | | | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | 
+| | | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | 
+| | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | 
+| | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | 
+| ->00.02% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->05.11% (5,120B) 0x4B29C23: _IO_file_doallocate (filedoalloc.c:101)
+| ->05.11% (5,120B) 0x4B38D5F: _IO_doallocbuf (genops.c:347)
+|   ->04.09% (4,096B) 0x4B37D5B: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:485)
+|   | ->04.09% (4,096B) 0x4B38E15: _IO_default_uflow (genops.c:362)
+|   |   ->04.09% (4,096B) 0x49736F0: __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|   |     ->04.09% (4,096B) 0x49817F5: std::istream::sentry::sentry(std::istream&, bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|   |       ->04.09% (4,096B) 0x49291A6: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|   |         ->04.09% (4,096B) 0x10C84B: main (main.cpp:26)
+|   |           
+|   ->01.02% (1,024B) 0x4B37FDF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|     ->01.02% (1,024B) 0x4B36754: _IO_new_file_xsputn (fileops.c:1243)
+|       ->01.02% (1,024B) 0x4B36754: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|         ->01.02% (1,024B) 0x4B2B056: fwrite (iofwrite.c:39)
+|           ->01.02% (1,024B) 0x499DB34: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|             ->01.02% (1,024B) 0x499DE8A: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|               ->01.02% (1,024B) 0x10C8F4: main (main.cpp:42)
+|                 
+->03.84% (3,843B) 0x10C7C8: __gnu_cxx::new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:127)
+| ->03.84% (3,843B) 0x10C52F: allocate (allocator.h:185)
+|   ->03.84% (3,843B) 0x10C52F: std::allocator_traits<std::allocator<char> >::allocate(std::allocator<char>&, unsigned long) (alloc_traits.h:464)
+|     ->03.84% (3,843B) 0x10C1B7: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) (basic_string.tcc:153)
+|       ->03.84% (3,843B) 0x10C355: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (basic_string.tcc:307)
+|       | ->01.92% (1,922B) 0x10C027: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::push_back(char) (basic_string.h:1345)
+|       | | ->01.92% (1,922B) in 2 places, all below massif's threshold (1.00%)
+|       | |   
+|       | ->01.92% (1,921B) 0x4929434: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|       |   ->01.92% (1,921B) 0x10C84B: main (main.cpp:26)
+|       |     
+|       ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|       
+->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 49      3,657,393           88,480           85,699         2,781            0
+96.86% (85,699B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->82.17% (72,704B) 0x490B979: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+| ->82.17% (72,704B) 0x400647D: call_init.part.0 (dl-init.c:70)
+|   ->82.17% (72,704B) 0x4006567: call_init (dl-init.c:33)
+|     ->82.17% (72,704B) 0x4006567: _dl_init (dl-init.c:117)
+|       ->82.17% (72,704B) 0x40202E9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->05.79% (5,120B) 0x4B29C23: _IO_file_doallocate (filedoalloc.c:101)
+| ->05.79% (5,120B) 0x4B38D5F: _IO_doallocbuf (genops.c:347)
+|   ->04.63% (4,096B) 0x4B37D5B: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:485)
+|   | ->04.63% (4,096B) 0x4B38E15: _IO_default_uflow (genops.c:362)
+|   |   ->04.63% (4,096B) 0x49736F0: __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|   |     ->04.63% (4,096B) 0x49817F5: std::istream::sentry::sentry(std::istream&, bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|   |       ->04.63% (4,096B) 0x49291A6: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|   |         ->04.63% (4,096B) 0x10C84B: main (main.cpp:26)
+|   |           
+|   ->01.16% (1,024B) 0x4B37FDF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|     ->01.16% (1,024B) 0x4B36754: _IO_new_file_xsputn (fileops.c:1243)
+|       ->01.16% (1,024B) 0x4B36754: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|         ->01.16% (1,024B) 0x4B2B056: fwrite (iofwrite.c:39)
+|           ->01.16% (1,024B) 0x499DB34: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|             ->01.16% (1,024B) 0x499DE8A: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|               ->01.16% (1,024B) 0x10C8F4: main (main.cpp:42)
+|                 
+->04.56% (4,032B) 0x10D33D: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:92)
+| ->04.53% (4,008B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | ->04.50% (3,984B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | ->04.48% (3,960B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | ->04.45% (3,936B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | ->04.42% (3,912B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | ->04.39% (3,888B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | ->04.37% (3,864B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | ->04.34% (3,840B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | ->04.31% (3,816B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | ->04.29% (3,792B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | ->04.26% (3,768B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | ->04.23% (3,744B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | ->04.20% (3,720B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | ->04.18% (3,696B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | ->04.15% (3,672B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | ->04.12% (3,648B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | ->04.10% (3,624B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | ->04.07% (3,600B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | ->04.04% (3,576B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | ->04.01% (3,552B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | ->03.99% (3,528B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | ->03.96% (3,504B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | ->03.93% (3,480B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | ->03.91% (3,456B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | ->03.88% (3,432B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | ->03.85% (3,408B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | ->03.82% (3,384B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | ->03.80% (3,360B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | ->03.77% (3,336B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | 
+| | | | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | 
+| | | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | 
+| | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | 
+| | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | 
+| | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | 
+| | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | 
+| | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | 
+| | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | 
+| | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | 
+| | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | 
+| | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | 
+| | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | 
+| ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->04.34% (3,843B) 0x10C7C8: __gnu_cxx::new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:127)
+| ->04.34% (3,843B) 0x10C52F: allocate (allocator.h:185)
+|   ->04.34% (3,843B) 0x10C52F: std::allocator_traits<std::allocator<char> >::allocate(std::allocator<char>&, unsigned long) (alloc_traits.h:464)
+|     ->04.34% (3,843B) 0x10C1B7: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) (basic_string.tcc:153)
+|       ->04.34% (3,843B) 0x10C355: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (basic_string.tcc:307)
+|       | ->02.17% (1,922B) 0x10C027: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::push_back(char) (basic_string.h:1345)
+|       | | ->01.09% (961B) 0x10BBC4: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator+=(char) (basic_string.h:1180)
+|       | | | ->01.09% (961B) 0x10B68E: infixToPrefix(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (conversions.cpp:53)
+|       | | | | ->01.09% (961B) 0x10C871: main (main.cpp:29)
+|       | | | |   
+|       | | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|       | | | 
+|       | | ->01.09% (961B) 0x10D6BB: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:157)
+|       | |   ->01.09% (961B) 0x10D69E: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:156)
+|       | |   | ->01.09% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |   ->01.09% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |     ->01.09% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |       ->01.09% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |         ->01.09% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |           ->01.09% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |             ->01.09% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |               ->01.09% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |                 ->01.09% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |                   ->01.09% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |                     ->01.09% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |                       ->01.09% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |                         ->01.09% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |                           ->01.09% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |                             ->01.09% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |                               ->01.09% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |                               | ->01.09% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |                               |   ->01.09% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |                               |     ->01.09% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |                               |       ->01.09% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |                               |         ->01.09% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |                               |           ->01.09% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |                               |             ->01.09% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |                               |               
+|       | |   |                               ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|       | |   |                               
+|       | |   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|       | |   
+|       | ->02.17% (1,921B) 0x4929434: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|       |   ->02.17% (1,921B) 0x10C84B: main (main.cpp:26)
+|       |     
+|       ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|       
+->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 50      3,657,708           88,120           85,483         2,637            0
+ 51      3,658,023           87,760           85,267         2,493            0
+ 52      3,658,338           87,400           85,051         2,349            0
+ 53      3,658,653           87,040           84,835         2,205            0
+ 54      3,658,968           86,680           84,619         2,061            0
+ 55      3,659,283           86,320           84,403         1,917            0
+ 56      3,659,598           85,960           84,187         1,773            0
+ 57      3,659,913           85,600           83,971         1,629            0
+ 58      3,660,228           85,240           83,755         1,485            0
+ 59      3,660,543           84,880           83,539         1,341            0
+98.42% (83,539B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->85.66% (72,704B) 0x490B979: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+| ->85.66% (72,704B) 0x400647D: call_init.part.0 (dl-init.c:70)
+|   ->85.66% (72,704B) 0x4006567: call_init (dl-init.c:33)
+|     ->85.66% (72,704B) 0x4006567: _dl_init (dl-init.c:117)
+|       ->85.66% (72,704B) 0x40202E9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->06.03% (5,120B) 0x4B29C23: _IO_file_doallocate (filedoalloc.c:101)
+| ->06.03% (5,120B) 0x4B38D5F: _IO_doallocbuf (genops.c:347)
+|   ->04.83% (4,096B) 0x4B37D5B: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:485)
+|   | ->04.83% (4,096B) 0x4B38E15: _IO_default_uflow (genops.c:362)
+|   |   ->04.83% (4,096B) 0x49736F0: __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|   |     ->04.83% (4,096B) 0x49817F5: std::istream::sentry::sentry(std::istream&, bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|   |       ->04.83% (4,096B) 0x49291A6: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|   |         ->04.83% (4,096B) 0x10C84B: main (main.cpp:26)
+|   |           
+|   ->01.21% (1,024B) 0x4B37FDF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|     ->01.21% (1,024B) 0x4B36754: _IO_new_file_xsputn (fileops.c:1243)
+|       ->01.21% (1,024B) 0x4B36754: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|         ->01.21% (1,024B) 0x4B2B056: fwrite (iofwrite.c:39)
+|           ->01.21% (1,024B) 0x499DB34: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|             ->01.21% (1,024B) 0x499DE8A: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|               ->01.21% (1,024B) 0x10C8F4: main (main.cpp:42)
+|                 
+->04.53% (3,843B) 0x10C7C8: __gnu_cxx::new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:127)
+| ->04.53% (3,843B) 0x10C52F: allocate (allocator.h:185)
+|   ->04.53% (3,843B) 0x10C52F: std::allocator_traits<std::allocator<char> >::allocate(std::allocator<char>&, unsigned long) (alloc_traits.h:464)
+|     ->04.53% (3,843B) 0x10C1B7: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) (basic_string.tcc:153)
+|       ->04.53% (3,843B) 0x10C355: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (basic_string.tcc:307)
+|       | ->02.26% (1,922B) 0x10C027: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::push_back(char) (basic_string.h:1345)
+|       | | ->01.13% (961B) 0x10BBC4: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator+=(char) (basic_string.h:1180)
+|       | | | ->01.13% (961B) 0x10B68E: infixToPrefix(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (conversions.cpp:53)
+|       | | | | ->01.13% (961B) 0x10C871: main (main.cpp:29)
+|       | | | |   
+|       | | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|       | | | 
+|       | | ->01.13% (961B) 0x10D6BB: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:157)
+|       | |   ->01.13% (961B) 0x10D69E: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:156)
+|       | |   | ->01.13% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |   ->01.13% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |     ->01.13% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |       ->01.13% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |         ->01.13% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |           ->01.13% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |             ->01.13% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |               ->01.13% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |                 ->01.13% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |                   ->01.13% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |                     ->01.13% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |                       ->01.13% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |                         ->01.13% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |                           ->01.13% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |                             ->01.13% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |                               ->01.13% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |                               | ->01.13% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |                               |   ->01.13% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |                               |     ->01.13% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |                               |       ->01.13% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |                               |         ->01.13% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |                               |           ->01.13% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |                               |             ->01.13% (961B) 0x10D6FD: inOrderTraversal(ParseTree*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) (tree.cpp:159)
+|       | |   |                               |               
+|       | |   |                               ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|       | |   |                               
+|       | |   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|       | |   
+|       | ->02.26% (1,921B) 0x4929434: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|       |   ->02.26% (1,921B) 0x10C84B: main (main.cpp:26)
+|       |     
+|       ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|       
+->02.21% (1,872B) 0x10D33D: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:92)
+| ->02.18% (1,848B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | ->02.15% (1,824B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | ->02.12% (1,800B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | ->02.09% (1,776B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | ->02.06% (1,752B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | ->02.04% (1,728B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | ->02.01% (1,704B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | ->01.98% (1,680B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | ->01.95% (1,656B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | ->01.92% (1,632B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | ->01.89% (1,608B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | ->01.87% (1,584B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | ->01.84% (1,560B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | ->01.81% (1,536B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | ->01.78% (1,512B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | ->01.75% (1,488B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | ->01.72% (1,464B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | ->01.70% (1,440B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | ->01.67% (1,416B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | ->01.64% (1,392B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | ->01.61% (1,368B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | ->01.58% (1,344B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | ->01.56% (1,320B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | ->01.53% (1,296B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | ->01.50% (1,272B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | ->01.47% (1,248B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | ->01.44% (1,224B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | ->01.41% (1,200B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | ->01.39% (1,176B) 0x10D3C9: createParseTree(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) (tree.cpp:99)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | | 
+| | | | | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | | 
+| | | | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | | 
+| | | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | | 
+| | | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | | 
+| | | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | | 
+| | | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | | 
+| | | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | | 
+| | | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | | 
+| | | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | | 
+| | | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | 
+| | | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | 
+| | | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | 
+| | ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| | 
+| ->00.03% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 60      3,660,858           84,520           83,323         1,197            0
+ 61      3,661,173           84,160           83,107         1,053            0
+ 62      3,661,488           83,800           82,891           909            0
+ 63      3,661,803           83,440           82,675           765            0
+ 64      3,662,118           83,080           82,459           621            0
+ 65      3,662,433           82,720           82,243           477            0
+ 66      3,662,748           82,360           82,027           333            0
+ 67      3,663,063           82,000           81,811           189            0
+ 68      3,663,470           80,776           80,706            70            0
+ 69      3,663,934           77,848           77,824            24            0
+99.97% (77,824B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->93.39% (72,704B) 0x490B979: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+| ->93.39% (72,704B) 0x400647D: call_init.part.0 (dl-init.c:70)
+|   ->93.39% (72,704B) 0x4006567: call_init (dl-init.c:33)
+|     ->93.39% (72,704B) 0x4006567: _dl_init (dl-init.c:117)
+|       ->93.39% (72,704B) 0x40202E9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->06.58% (5,120B) 0x4B29C23: _IO_file_doallocate (filedoalloc.c:101)
+| ->06.58% (5,120B) 0x4B38D5F: _IO_doallocbuf (genops.c:347)
+|   ->05.26% (4,096B) 0x4B37D5B: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:485)
+|   | ->05.26% (4,096B) 0x4B38E15: _IO_default_uflow (genops.c:362)
+|   |   ->05.26% (4,096B) 0x49736F0: __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|   |     ->05.26% (4,096B) 0x49817F5: std::istream::sentry::sentry(std::istream&, bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|   |       ->05.26% (4,096B) 0x49291A6: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|   |         ->05.26% (4,096B) 0x10C84B: main (main.cpp:26)
+|   |           
+|   ->01.32% (1,024B) 0x4B37FDF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|     ->01.32% (1,024B) 0x4B36754: _IO_new_file_xsputn (fileops.c:1243)
+|       ->01.32% (1,024B) 0x4B36754: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|         ->01.32% (1,024B) 0x4B2B056: fwrite (iofwrite.c:39)
+|           ->01.32% (1,024B) 0x499DB34: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|             ->01.32% (1,024B) 0x499DE8A: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|               ->01.32% (1,024B) 0x10C8F4: main (main.cpp:42)
+|                 
+->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 70      3,674,880            5,136            5,120            16            0
+ 71      3,675,824            1,032            1,024             8            0
