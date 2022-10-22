@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['_7eparsetree_0',['~ParseTree',['../classParseTree.html#a4ad1cfc7324e0811df05c0fc2b9dfeff',1,'ParseTree']]],
-  ['_7estack_1',['~Stack',['../classStack.html#a40bd5dff912f0e5290777c4b46d17809',1,'Stack']]]
+  ['value_0',['value',['../classParseTree.html#a5011e33c08a345d2653ed28c161b3275',1,'ParseTree']]]
 ];

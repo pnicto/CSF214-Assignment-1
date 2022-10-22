@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['parsetree_0',['ParseTree',['../classParseTree.html',1,'']]]
+  ['event_0',['Event',['../classstackcollapse-chrome-tracing_1_1Event.html',1,'stackcollapse-chrome-tracing']]]
 ];

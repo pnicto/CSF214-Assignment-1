@@ -42,7 +42,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="classParseTree.html#adf597d2ebd88e8275d7ac78b09d68ce4" target="_top" xlink:title="Set the left node of a node to the given node.">
+<g id="a_node3"><a xlink:href="classParseTree.html#adf597d2ebd88e8275d7ac78b09d68ce4" target="_top" xlink:title="Set the left node of a given node.">
 <polygon fill="white" stroke="black" points="273.5,-38.5 273.5,-57.5 402.5,-57.5 402.5,-38.5 273.5,-38.5"/>
 <text text-anchor="middle" x="338" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">ParseTree::setLeftNode</text>
 </a>
@@ -57,7 +57,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="classParseTree.html#a0effbd955454ab1beec9940cd6631dba" target="_top" xlink:title="Set the right node of a node to the given node.">
+<g id="a_node4"><a xlink:href="classParseTree.html#a0effbd955454ab1beec9940cd6631dba" target="_top" xlink:title="Set the right node of a given node.">
 <polygon fill="white" stroke="black" points="270,-0.5 270,-19.5 406,-19.5 406,-0.5 270,-0.5"/>
 <text text-anchor="middle" x="338" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ParseTree::setRightNode</text>
 </a>

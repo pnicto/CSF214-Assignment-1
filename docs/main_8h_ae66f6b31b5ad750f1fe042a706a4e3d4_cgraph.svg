@@ -316,7 +316,7 @@ var sectionId = 'dynsection-2';
 <!-- Node14 -->
 <g id="node14" class="node">
 <title>Node14</title>
-<g id="a_node14"><a xlink:href="classParseTree.html#adf597d2ebd88e8275d7ac78b09d68ce4" target="_top" xlink:title="Set the left node of a node to the given node.">
+<g id="a_node14"><a xlink:href="classParseTree.html#adf597d2ebd88e8275d7ac78b09d68ce4" target="_top" xlink:title="Set the left node of a given node.">
 <polygon fill="white" stroke="black" points="403,-0.5 403,-19.5 532,-19.5 532,-0.5 403,-0.5"/>
 <text text-anchor="middle" x="467.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ParseTree::setLeftNode</text>
 </a>
@@ -331,7 +331,7 @@ var sectionId = 'dynsection-2';
 <!-- Node15 -->
 <g id="node15" class="node">
 <title>Node15</title>
-<g id="a_node15"><a xlink:href="classParseTree.html#a0effbd955454ab1beec9940cd6631dba" target="_top" xlink:title="Set the right node of a node to the given node.">
+<g id="a_node15"><a xlink:href="classParseTree.html#a0effbd955454ab1beec9940cd6631dba" target="_top" xlink:title="Set the right node of a given node.">
 <polygon fill="white" stroke="black" points="399.5,-38.5 399.5,-57.5 535.5,-57.5 535.5,-38.5 399.5,-38.5"/>
 <text text-anchor="middle" x="467.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">ParseTree::setRightNode</text>
 </a>

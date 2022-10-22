@@ -12,7 +12,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title="Set the right node of a node to the given node.">
+<g id="a_node1"><a xlink:title="Set the right node of a given node.">
 <polygon fill="#bfbfbf" stroke="black" points="347,-0.5 347,-19.5 483,-19.5 483,-0.5 347,-0.5"/>
 <text text-anchor="middle" x="415" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ParseTree::setRightNode</text>
 </a>
