@@ -59,4 +59,5 @@ flame: cleaner all
 	@echo Flame graph generated at ./logs/flame.svg
 
 docs:
+	rm -rf docs
 	doxygen Doxyfile
