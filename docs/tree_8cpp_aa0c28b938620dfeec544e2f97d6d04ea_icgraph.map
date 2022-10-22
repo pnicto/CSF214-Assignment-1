@@ -1,5 +1,0 @@
-<map id="getNodeTruthValue" name="getNodeTruthValue">
-<area shape="rect" id="node1" title="Gets the truth value of a given node." alt="" coords="332,29,479,56"/>
-<area shape="rect" id="node2" href="$tree_8cpp.html#a25643aa8241f085240d87644329f4656" title="Evaluates the truth value of a given parse tree." alt="" coords="108,29,284,56"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Where the tasks are run." alt="" coords="5,29,60,56"/>
-</map>

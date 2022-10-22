@@ -25,14 +25,6 @@
 var NAVTREE =
 [
   [ "CS F214 Assignment 1", "index.html", [
-    [ "Flame Graphs visualize profiled code", "md_flame_README.html", [
-      [ "1\\. Capture stacks", "md_flame_README.html#autotoc_md1", null ],
-      [ "2\\. Fold stacks", "md_flame_README.html#autotoc_md4", null ],
-      [ "3\\. flamegraph.pl", "md_flame_README.html#autotoc_md5", null ],
-      [ "Provided Examples", "md_flame_README.html#autotoc_md6", null ],
-      [ "Options", "md_flame_README.html#autotoc_md9", null ],
-      [ "Consistent Palette", "md_flame_README.html#autotoc_md10", null ]
-    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

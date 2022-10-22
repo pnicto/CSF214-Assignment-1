@@ -1,9 +1,0 @@
-<map id="ParseTree::getValue" name="ParseTree::getValue">
-<area shape="rect" id="node1" title="Get the value of the node." alt="" coords="527,104,677,131"/>
-<area shape="rect" id="node2" href="$tree_8cpp.html#aa0c28b938620dfeec544e2f97d6d04ea" title="Gets the truth value of a given node." alt="" coords="332,29,479,56"/>
-<area shape="rect" id="node5" href="$tree_8cpp.html#aa2112d5255c2ad249f275f84a5c02181" title="Utility method which traverses the tree in in&#45;order manner." alt="" coords="340,104,471,131"/>
-<area shape="rect" id="node7" href="$tree_8cpp.html#a705609245a7281d7c1186f2097e53427" title="Prints the binary tree." alt="" coords="117,155,275,181"/>
-<area shape="rect" id="node3" href="$tree_8cpp.html#a25643aa8241f085240d87644329f4656" title="Evaluates the truth value of a given parse tree." alt="" coords="108,29,284,56"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Where the tasks are run." alt="" coords="5,80,60,107"/>
-<area shape="rect" id="node6" href="$tree_8cpp.html#abbc27d85ce3224d78c8b59f4744f76f5" title="Traverses the parse tree and return the infix formula." alt="" coords="132,80,260,107"/>
-</map>

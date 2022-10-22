@@ -1,5 +1,0 @@
-<map id="createParseTree" name="createParseTree">
-<area shape="rect" id="node1" title="Takes in start and end pointers and generates a binary tree recursively." alt="" coords="293,29,420,56"/>
-<area shape="rect" id="node2" href="$tree_8cpp.html#a9f774923275158a677269871dc4dda65" title="Takes in a prefix formula and converts it into a rooted binary parse tree." alt="" coords="108,29,245,56"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Where the tasks are run." alt="" coords="5,29,60,56"/>
-</map>
