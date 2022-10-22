@@ -15,7 +15,8 @@
 
 /*!
  * @brief Class for parse tree
- * @details Implments a rooted binary parse tree for a given propositional logic formula.
+ * @details Implements a rooted binary parse tree for a given propositional
+ * logic formula.
  *
  */
 class ParseTree {
@@ -62,7 +63,7 @@ void printBinaryParseTree(const std::string &prefix, ParseTree *node,
                           bool isLeft);
 
 // Task 3
-void inOrderTraversal(ParseTree *nodePtr);
+void inOrderTraversal(ParseTree *nodePtr, std::string *infixFormulaPtr);
 std::string parseTreeToInfix(ParseTree *nodePtr);
 
 // Task 4
