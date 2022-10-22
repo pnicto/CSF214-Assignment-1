@@ -6,7 +6,7 @@
  * @copyright Copyright (c) 2022
  *
  */
-#include "../include/parsetree.h"
+#include "../include/tree.h"
 
 /*!
  * @brief Construct a new Parse Tree object which takes ParseTree::value

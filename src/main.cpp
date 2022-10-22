@@ -10,7 +10,7 @@
 #include "../include/main.h"
 
 #include "../include/conversions.h"
-#include "../include/parsetree.h"
+#include "../include/tree.h"
 
 /*!
  * @brief Where the tasks are run
