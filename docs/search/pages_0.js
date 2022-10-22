@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['cs_20f214_20assignment_201_0',['CS F214 Assignment 1',['../index.html',1,'']]]
+  ['analysis_0',['Analysis',['../md_md_docs_Analysis.html',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['maxelements_0',['maxElements',['../classStack.html#ac58e2b7be90c620b419e42e9aef7a708',1,'Stack']]]
+  ['maxelements_0',['maxElements',['../classStack.html#a88942cf750fe85dcb5523455e9b2d4fe',1,'Stack']]]
 ];

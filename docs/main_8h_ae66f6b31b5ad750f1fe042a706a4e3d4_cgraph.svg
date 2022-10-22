@@ -82,7 +82,7 @@ var sectionId = 'dynsection-2';
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:href="tree_8cpp.html#a547f3073058ac0de704fff6c21e4134c" target="_top" xlink:title="Calculate the height of the binary tree recursively.">
+<g id="a_node7"><a xlink:href="tree_8cpp.html#ad2f6a97c53f57d91543d4af711c0cfd0" target="_top" xlink:title="Calculate the height of the binary tree recursively.">
 <polygon fill="white" stroke="black" points="85,-230.5 85,-249.5 201,-249.5 201,-230.5 85,-230.5"/>
 <text text-anchor="middle" x="143" y="-237.5" font-family="Helvetica,sans-Serif" font-size="10.00">getBinaryTreeHeight</text>
 </a>
@@ -223,7 +223,7 @@ var sectionId = 'dynsection-2';
 <!-- Node8 -->
 <g id="node8" class="node">
 <title>Node8</title>
-<g id="a_node8"><a xlink:href="tree_8cpp.html#af018a1a010b6d8165c511b6ba72ec8b2" target="_top" xlink:title="Get the max height of the node.">
+<g id="a_node8"><a xlink:href="tree_8cpp.html#a8ccf3ee7a8689bad9852e920cba297af" target="_top" xlink:title="Get the max height of the node.">
 <polygon fill="white" stroke="black" points="259,-244.5 259,-263.5 349,-263.5 349,-244.5 259,-244.5"/>
 <text text-anchor="middle" x="304" y="-251.5" font-family="Helvetica,sans-Serif" font-size="10.00">getNodeHeight</text>
 </a>

@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="tree_8cpp.html#af018a1a010b6d8165c511b6ba72ec8b2" target="_top" xlink:title="Get the max height of the node.">
+<g id="a_node2"><a xlink:href="tree_8cpp.html#a8ccf3ee7a8689bad9852e920cba297af" target="_top" xlink:title="Get the max height of the node.">
 <polygon fill="white" stroke="black" points="152,-19.5 152,-38.5 242,-38.5 242,-19.5 152,-19.5"/>
 <text text-anchor="middle" x="197" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">getNodeHeight</text>
 </a>
