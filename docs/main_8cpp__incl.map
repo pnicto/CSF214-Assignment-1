@@ -1,11 +1,12 @@
 <map id="src/main.cpp" name="src/main.cpp">
-<area shape="rect" id="node1" title="Source file for main." alt="" coords="195,5,301,32"/>
-<area shape="rect" id="node2" href="$main_8h.html" title="Header file for main." alt="" coords="5,80,136,107"/>
-<area shape="rect" id="node4" href="$conversions_8h.html" title="Header file for conversions." alt="" coords="161,80,335,107"/>
-<area shape="rect" id="node8" href="$tree_8h.html" title="Header file for tree." alt="" coords="384,80,507,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="124,229,204,256"/>
-<area shape="rect" id="node5" title=" " alt="" coords="223,155,308,181"/>
-<area shape="rect" id="node6" title=" " alt="" coords="332,155,391,181"/>
-<area shape="rect" id="node7" href="$stack_8h.html" title="Header file for stack." alt="" coords="129,155,199,181"/>
-<area shape="rect" id="node9" title=" " alt="" coords="466,155,590,181"/>
+<area shape="rect" id="node1" title="Source file for main." alt="" coords="139,5,245,32"/>
+<area shape="rect" id="node2" href="$main_8h.html" title="Header file for main." alt="" coords="127,80,257,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,379,85,405"/>
+<area shape="rect" id="node4" href="$conversions_8h.html" title="Header file for conversions." alt="" coords="189,155,301,181"/>
+<area shape="rect" id="node7" href="$parsetree_8h.html" title="Header file for parse tree." alt="" coords="204,304,300,331"/>
+<area shape="rect" id="node10" href="$utils_8h.html" title="Utility functions for tasks." alt="" coords="366,229,429,256"/>
+<area shape="rect" id="node5" title=" " alt="" coords="109,379,195,405"/>
+<area shape="rect" id="node6" title=" " alt="" coords="368,379,427,405"/>
+<area shape="rect" id="node9" href="$stack_8h.html" title="Header file for stack." alt="" coords="60,304,129,331"/>
+<area shape="rect" id="node8" title=" " alt="" coords="219,379,343,405"/>
 </map>

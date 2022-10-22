@@ -1,0 +1,5 @@
+<map id="ParseTree::getHeight" name="ParseTree::getHeight">
+<area shape="rect" id="node1" title="Calculate the height of the binary tree recursively." alt="" coords="5,31,163,57"/>
+<area shape="rect" id="node2" href="$classParseTree.html#ae1cb6829644917b9437f28a08b1e60a1" title="Get the left node when a node is given." alt="" coords="215,5,389,32"/>
+<area shape="rect" id="node3" href="$classParseTree.html#a101193b71bc7e02d051dd73e6f079aa1" title="Get the right node when a node is given." alt="" coords="211,56,393,83"/>
+</map>

@@ -1,5 +1,6 @@
 <map id="include/conversions.h" name="include/conversions.h">
-<area shape="rect" id="node1" title="Header file for conversions." alt="" coords="75,6,238,33"/>
-<area shape="rect" id="node2" href="$conversions_8cpp.html" title="Source file for conversions." alt="" coords="5,81,156,108"/>
-<area shape="rect" id="node3" href="$main_8cpp.html" title="Source file for main." alt="" coords="180,81,285,108"/>
+<area shape="rect" id="node1" title="Header file for conversions." alt="" coords="62,6,225,33"/>
+<area shape="rect" id="node2" href="$main_8h.html" title="Header file for main." alt="" coords="5,81,124,108"/>
+<area shape="rect" id="node4" href="$conversions_8cpp.html" title="Source file for conversions." alt="" coords="148,81,299,108"/>
+<area shape="rect" id="node3" href="$main_8cpp.html" title="Source file for main." alt="" coords="12,156,117,182"/>
 </map>

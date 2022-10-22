@@ -103,17 +103,19 @@ $(document).ready(function(){initNavTree('conversions_8h.html',''); initResizabl
 <div class="textblock"><code>#include &lt;algorithm&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &quot;<a class="el" href="conversions_8h_source.html">conversions.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="parsetree_8h_source.html">parsetree.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="stack_8h_source.html">stack.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="utils_8h_source.html">utils.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for conversions.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="conversions_8h__incl.svg" width="278" height="188"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="conversions_8h__incl.svg" width="432" height="263"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="conversions_8h__dep__incl.svg" width="291" height="114"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="conversions_8h__dep__incl.svg" width="304" height="188"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -124,6 +126,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a32422df5e46274fb24a354222b40cea1"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conversions_8h.html#a32422df5e46274fb24a354222b40cea1">infixToPrefix</a> (std::string infixFormula)</td></tr>
 <tr class="memdesc:a32422df5e46274fb24a354222b40cea1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes the infix formula given and converts into prefix formula.  <a href="conversions_8h.html#a32422df5e46274fb24a354222b40cea1">More...</a><br /></td></tr>
 <tr class="separator:a32422df5e46274fb24a354222b40cea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f774923275158a677269871dc4dda65"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classParseTree.html">ParseTree</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conversions_8h.html#a9f774923275158a677269871dc4dda65">prefixToParseTree</a> (std::string prefixFormula)</td></tr>
+<tr class="memdesc:a9f774923275158a677269871dc4dda65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes in a prefix formula and converts it into a rooted binary parse tree.  <a href="conversions_8h.html#a9f774923275158a677269871dc4dda65">More...</a><br /></td></tr>
+<tr class="separator:a9f774923275158a677269871dc4dda65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Header file for conversions. </p>
@@ -155,6 +160,39 @@ Functions</h2></td></tr>
 </dl>
 <p>Reverses the given infix formula and iterates through the formula pushing "+" , "*", "&gt;", "~", ")" into the stack while the remaining characters are added to prefix string variable until "(" is found. Then the stack is popped until ")" again adding the popped operators to the prefix string.</p>
 <dl class="section return"><dt>Returns</dt><dd>std::string prefixFormula </dd></dl>
+
+</div>
+</div>
+<a id="a9f774923275158a677269871dc4dda65" name="a9f774923275158a677269871dc4dda65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f774923275158a677269871dc4dda65">&#9670;&nbsp;</a></span>prefixToParseTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classParseTree.html">ParseTree</a> * prefixToParseTree </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>prefixFormula</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Takes in a prefix formula and converts it into a rooted binary parse tree. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prefixFormula</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>ParseTree* </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="conversions_8h_a9f774923275158a677269871dc4dda65_cgraph.svg" width="552" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>

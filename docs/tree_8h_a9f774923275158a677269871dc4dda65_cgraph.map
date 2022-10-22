@@ -1,6 +1,0 @@
-<map id="prefixToParseTree" name="prefixToParseTree">
-<area shape="rect" id="node1" title="Takes in a prefix formula and converts it into a rooted binary parse tree." alt="" coords="5,31,143,57"/>
-<area shape="rect" id="node2" href="$tree_8cpp.html#ac3a144eab5f857eeb3aabaf201b57796" title="Takes in start and end pointers and generates a binary tree recursively." alt="" coords="191,31,317,57"/>
-<area shape="rect" id="node3" href="$classParseTree.html#adf597d2ebd88e8275d7ac78b09d68ce4" title="Set the left node of a given node." alt="" coords="370,5,542,32"/>
-<area shape="rect" id="node4" href="$classParseTree.html#a0effbd955454ab1beec9940cd6631dba" title="Set the right node of a given node." alt="" coords="365,56,547,83"/>
-</map>

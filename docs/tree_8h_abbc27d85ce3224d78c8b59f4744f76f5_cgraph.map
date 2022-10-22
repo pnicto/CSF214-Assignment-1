@@ -1,7 +1,0 @@
-<map id="parseTreeToInfix" name="parseTreeToInfix">
-<area shape="rect" id="node1" title="Traverses the parse tree and return the infix formula." alt="" coords="5,56,133,83"/>
-<area shape="rect" id="node2" href="$tree_8cpp.html#aa2112d5255c2ad249f275f84a5c02181" title="Utility method which traverses the tree in in&#45;order manner." alt="" coords="181,56,312,83"/>
-<area shape="rect" id="node3" href="$classParseTree.html#ae1cb6829644917b9437f28a08b1e60a1" title="Get the left node when a node is given." alt="" coords="365,5,538,32"/>
-<area shape="rect" id="node4" href="$classParseTree.html#a101193b71bc7e02d051dd73e6f079aa1" title="Get the right node when a node is given." alt="" coords="360,56,543,83"/>
-<area shape="rect" id="node5" href="$classParseTree.html#a816af779bb7d32b6ab6e513cf69648a4" title="Get the value of the node." alt="" coords="376,107,527,133"/>
-</map>

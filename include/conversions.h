@@ -12,6 +12,11 @@
 #include <string>
 
 #include "conversions.h"
+#include "parsetree.h"
 #include "stack.h"
+#include "utils.h"
 
 std::string infixToPrefix(std::string infixFormula);
+
+// Task 2
+ParseTree *prefixToParseTree(std::string prefixFormula);

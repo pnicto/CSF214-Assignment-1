@@ -1,18 +1,17 @@
 <map id="main" name="main">
 <area shape="rect" id="node1" title="Where the tasks are run." alt="" coords="5,203,60,229"/>
-<area shape="rect" id="node2" href="$tree_8cpp.html#a25643aa8241f085240d87644329f4656" title="Evaluates the truth value of a given parse tree." alt="" coords="108,116,284,143"/>
-<area shape="rect" id="node7" href="$tree_8cpp.html#ad2f6a97c53f57d91543d4af711c0cfd0" title="Calculate the height of the binary tree recursively." alt="" coords="119,48,273,75"/>
-<area shape="rect" id="node9" href="$conversions_8cpp.html#a32422df5e46274fb24a354222b40cea1" title="Takes the infix formula given and converts into prefix formula." alt="" coords="145,279,247,305"/>
-<area shape="rect" id="node10" href="$tree_8cpp.html#abbc27d85ce3224d78c8b59f4744f76f5" title="Traverses the parse tree and return the infix formula." alt="" coords="132,177,260,204"/>
-<area shape="rect" id="node12" href="$tree_8cpp.html#a9f774923275158a677269871dc4dda65" title="Takes in a prefix formula and converts it into a rooted binary parse tree." alt="" coords="127,329,265,356"/>
-<area shape="rect" id="node16" href="$tree_8cpp.html#a705609245a7281d7c1186f2097e53427" title="Prints the binary tree." alt="" coords="332,253,489,280"/>
-<area shape="rect" id="node3" href="$tree_8cpp.html#aa0c28b938620dfeec544e2f97d6d04ea" title="Gets the truth value of a given node." alt="" coords="337,104,484,131"/>
-<area shape="rect" id="node4" href="$classParseTree.html#ae1cb6829644917b9437f28a08b1e60a1" title="Get the left node when a node is given." alt="" coords="542,155,715,181"/>
-<area shape="rect" id="node5" href="$classParseTree.html#a101193b71bc7e02d051dd73e6f079aa1" title="Get the right node when a node is given." alt="" coords="537,104,720,131"/>
-<area shape="rect" id="node6" href="$classParseTree.html#a816af779bb7d32b6ab6e513cf69648a4" title="Get the value of the node." alt="" coords="553,205,704,232"/>
-<area shape="rect" id="node8" href="$tree_8cpp.html#a8ccf3ee7a8689bad9852e920cba297af" title="Get the max height of the node." alt="" coords="351,29,471,56"/>
-<area shape="rect" id="node11" href="$tree_8cpp.html#aa2112d5255c2ad249f275f84a5c02181" title="Utility method which traverses the tree in in&#45;order manner." alt="" coords="345,179,476,205"/>
-<area shape="rect" id="node13" href="$tree_8cpp.html#ac3a144eab5f857eeb3aabaf201b57796" title="Takes in start and end pointers and generates a binary tree recursively." alt="" coords="347,329,474,356"/>
-<area shape="rect" id="node14" href="$classParseTree.html#adf597d2ebd88e8275d7ac78b09d68ce4" title="Set the left node of a given node." alt="" coords="543,355,715,381"/>
-<area shape="rect" id="node15" href="$classParseTree.html#a0effbd955454ab1beec9940cd6631dba" title="Set the right node of a given node." alt="" coords="538,304,719,331"/>
+<area shape="rect" id="node2" href="$utils_8cpp.html#a25643aa8241f085240d87644329f4656" title="Evaluates the truth value of a given parse tree." alt="" coords="127,116,303,143"/>
+<area shape="rect" id="node7" href="$classParseTree.html#aa09112584a4aa46f867f38fe48179954" title="Calculate the height of the binary tree recursively." alt="" coords="393,29,550,56"/>
+<area shape="rect" id="node8" href="$classParseTree.html#ad2561b779306154ebc3527b0ee1bb855" title="Traverses the parse tree and return the infix formula." alt="" coords="108,177,323,204"/>
+<area shape="rect" id="node10" href="$conversions_8cpp.html#a32422df5e46274fb24a354222b40cea1" title="Takes the infix formula given and converts into prefix formula." alt="" coords="164,279,267,305"/>
+<area shape="rect" id="node11" href="$conversions_8cpp.html#a9f774923275158a677269871dc4dda65" title="Takes in a prefix formula and converts it into a rooted binary parse tree." alt="" coords="147,329,284,356"/>
+<area shape="rect" id="node15" href="$classParseTree.html#a7c0dd4173a68c9f9f8aa13fae399f4b0" title="Prints the binary tree." alt="" coords="378,253,565,280"/>
+<area shape="rect" id="node3" href="$utils_8cpp.html#aa0c28b938620dfeec544e2f97d6d04ea" title="Gets the truth value of a given node." alt="" coords="398,104,545,131"/>
+<area shape="rect" id="node4" href="$classParseTree.html#ae1cb6829644917b9437f28a08b1e60a1" title="Get the left node when a node is given." alt="" coords="625,155,798,181"/>
+<area shape="rect" id="node5" href="$classParseTree.html#a101193b71bc7e02d051dd73e6f079aa1" title="Get the right node when a node is given." alt="" coords="620,104,803,131"/>
+<area shape="rect" id="node6" href="$classParseTree.html#a816af779bb7d32b6ab6e513cf69648a4" title="Get the value of the node." alt="" coords="636,205,787,232"/>
+<area shape="rect" id="node9" href="$classParseTree.html#a434c3422fae323882805bd4109f06ba0" title="Utility method which traverses the tree in in&#45;order manner." alt="" coords="371,179,572,205"/>
+<area shape="rect" id="node12" href="$utils_8cpp.html#ac3a144eab5f857eeb3aabaf201b57796" title="Takes in start and end pointers and generates a binary tree recursively." alt="" coords="408,329,535,356"/>
+<area shape="rect" id="node13" href="$classParseTree.html#adf597d2ebd88e8275d7ac78b09d68ce4" title="Set the left node of a given node." alt="" coords="625,355,797,381"/>
+<area shape="rect" id="node14" href="$classParseTree.html#a0effbd955454ab1beec9940cd6631dba" title="Set the right node of a given node." alt="" coords="621,304,802,331"/>
 </map>
