@@ -11,6 +11,6 @@
 #include <iostream>
 
 #include "conversions.h"
-#include "parsetree.h"
+#include "tree.h"
 
 int main();
