@@ -180,10 +180,10 @@ std::string parseTreeToInfix(ParseTree *nodePtr) {
  * @param node
  * @return int
  */
-int getNodeHeight(ParseTree *node) {
+long long int getNodeHeight(ParseTree *node) {
   if (node == nullptr) return 0;
-  return 1 + std::max(getNodeHeight(node->getLeftNode(node)),
-                      getNodeHeight(node->getRightNode(node)));
+  return 1 + std::max<long long int>(getNodeHeight(node->getLeftNode(node)),
+                                     getNodeHeight(node->getRightNode(node)));
 }
 
 /*!
@@ -192,9 +192,8 @@ int getNodeHeight(ParseTree *node) {
  * @param binaryTree
  * @return int
  */
-int getBinaryTreeHeight(ParseTree *binaryTree) {
-  int height = getNodeHeight(binaryTree);
-  return height;
+long long int getBinaryTreeHeight(ParseTree *binaryTree) {
+  return getNodeHeight(binaryTree);
 }
 
 // Task 5
@@ -230,10 +229,12 @@ bool getNodeTruthValue(ParseTree *nodePtr,
         return (*hashPtr)[nodePtr->getValue()];
       else {
         char truthVal{};
-        std::cout
-            << "Please enter the truth value (T/F) for propositional atom '"
-            << nodePtr->getValue() << "': ";
-        std::cin >> truthVal;
+        srand((unsigned int)time(0));
+        truthVal = rand() < 2147483647 / 2 ? 'T' : 'F';
+        // std::cout
+        //     << "Please enter the truth value (T/F) for propositional atom '"
+        //     << nodePtr->getValue() << "': ";
+        // std::cin >> truthVal;
         if (truthVal == 'T' || truthVal == 't') {
           (*hashPtr)[nodePtr->getValue()] = true;
           return true;

@@ -17,7 +17,7 @@
 void Stack::resizeArray() {
   tempStackElements = stackElements;
   stackElements = new char[maxElements * 2]{};
-  for (int i = 0; i < maxElements; i++) {
+  for (long long int i = 0; i < maxElements; i++) {
     stackElements[i] = tempStackElements[i];
   }
   maxElements = 2 * maxElements;
@@ -74,7 +74,7 @@ char Stack::pop() {
  *
  */
 void Stack::printStack() {
-  for (int i = 0; i < maxElements; i++) {
+  for (long long int i = 0; i < maxElements; i++) {
     std::cout << stackElements[i] << std::endl;
   }
 }

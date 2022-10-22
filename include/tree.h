@@ -67,8 +67,8 @@ void inOrderTraversal(ParseTree *nodePtr, std::string *infixFormulaPtr);
 std::string parseTreeToInfix(ParseTree *nodePtr);
 
 // Task 4
-int getNodeHeight(ParseTree *node);
-int getBinaryTreeHeight(ParseTree *binaryTree);
+long long int getNodeHeight(ParseTree *node);
+long long int getBinaryTreeHeight(ParseTree *binaryTree);
 
 // Task 5
 bool getNodeTruthValue(ParseTree *nodePtr,

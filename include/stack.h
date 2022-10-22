@@ -11,7 +11,8 @@
 #include <iostream>
 
 /*!
- * @brief Class for stack to store operators to convert the propositional logic formula from infix to prefix.
+ * @brief Class for stack to store operators to convert the propositional logic
+ * formula from infix to prefix.
  *
  */
 class Stack {
@@ -33,13 +34,13 @@ class Stack {
    * @brief Maximum elements the stack can store
    *
    */
-  int maxElements{};
+  long long int maxElements{};
 
   /*!
    * @brief Index of the topmost element in the stack
    *
    */
-  int idx{};
+  long long int idx{};
 
   void resizeArray();
 
