@@ -1,15 +1,4 @@
-# CS F214 Assignment 1 {#mainpage}
-
-#### Table of Contents
-- <a href="./index.html">Main page</a>
-- Classes
-  - <a href="./annotated.html">Class List</a>
-  - <a href="./functions.html">Class Members</a>
-- Files
-  - <a href="./files.html">File List</a>
-  - <a href="./globals.html">File Members</a>
-
-#### Our Experiences
+# CS F214 Assignment 1
 
 #### Team members
 
