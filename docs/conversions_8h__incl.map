@@ -1,7 +1,10 @@
 <map id="include/conversions.h" name="include/conversions.h">
-<area shape="rect" id="node1" title="Header file for conversions." alt="" coords="63,7,225,33"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,81,91,108"/>
-<area shape="rect" id="node3" title=" " alt="" coords="115,81,173,108"/>
-<area shape="rect" id="node4" href="$stack_8h.html" title="Header file for stack." alt="" coords="197,81,267,108"/>
-<area shape="rect" id="node5" title=" " alt="" coords="192,156,272,183"/>
+<area shape="rect" id="node1" title="Header file for conversions." alt="" coords="164,7,327,33"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,231,91,257"/>
+<area shape="rect" id="node3" title=" " alt="" coords="368,231,427,257"/>
+<area shape="rect" id="node4" href="$parsetree_8h.html" title="Header file for parse tree." alt="" coords="213,156,309,183"/>
+<area shape="rect" id="node7" href="$stack_8h.html" title="Header file for stack." alt="" coords="120,156,189,183"/>
+<area shape="rect" id="node8" href="$utils_8h.html" title="Utility functions for tasks." alt="" coords="283,81,346,108"/>
+<area shape="rect" id="node5" title=" " alt="" coords="115,231,195,257"/>
+<area shape="rect" id="node6" title=" " alt="" coords="219,231,343,257"/>
 </map>

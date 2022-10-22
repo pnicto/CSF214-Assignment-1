@@ -94,6 +94,7 @@ $(document).ready(function(){initNavTree('classParseTree.html',''); initResizabl
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classParseTree-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">ParseTree Class Reference</div></div>
@@ -103,7 +104,7 @@ $(document).ready(function(){initNavTree('classParseTree.html',''); initResizabl
 <p>Class for parse tree.  
  <a href="classParseTree.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="tree_8h_source.html">tree.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="parsetree_8h_source.html">parsetree.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for ParseTree:</div>
 <div class="dyncontent">
@@ -129,12 +130,27 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a101193b71bc7e02d051dd73e6f079aa1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classParseTree.html">ParseTree</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParseTree.html#a101193b71bc7e02d051dd73e6f079aa1">getRightNode</a> (<a class="el" href="classParseTree.html">ParseTree</a> *node)</td></tr>
 <tr class="memdesc:a101193b71bc7e02d051dd73e6f079aa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the right node when a node is given.  <a href="classParseTree.html#a101193b71bc7e02d051dd73e6f079aa1">More...</a><br /></td></tr>
 <tr class="separator:a101193b71bc7e02d051dd73e6f079aa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa09112584a4aa46f867f38fe48179954"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParseTree.html#aa09112584a4aa46f867f38fe48179954">getHeight</a> (<a class="el" href="classParseTree.html">ParseTree</a> *binaryTree)</td></tr>
+<tr class="memdesc:aa09112584a4aa46f867f38fe48179954"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the height of the binary tree recursively.  <a href="classParseTree.html#aa09112584a4aa46f867f38fe48179954">More...</a><br /></td></tr>
+<tr class="separator:aa09112584a4aa46f867f38fe48179954"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2561b779306154ebc3527b0ee1bb855"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParseTree.html#ad2561b779306154ebc3527b0ee1bb855">getInfixExpression</a> (<a class="el" href="classParseTree.html">ParseTree</a> *nodePtr)</td></tr>
+<tr class="memdesc:ad2561b779306154ebc3527b0ee1bb855"><td class="mdescLeft">&#160;</td><td class="mdescRight">Traverses the parse tree and return the infix formula.  <a href="classParseTree.html#ad2561b779306154ebc3527b0ee1bb855">More...</a><br /></td></tr>
+<tr class="separator:ad2561b779306154ebc3527b0ee1bb855"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf597d2ebd88e8275d7ac78b09d68ce4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParseTree.html#adf597d2ebd88e8275d7ac78b09d68ce4">setLeftNode</a> (<a class="el" href="classParseTree.html">ParseTree</a> *node)</td></tr>
 <tr class="memdesc:adf597d2ebd88e8275d7ac78b09d68ce4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the left node of a given node.  <a href="classParseTree.html#adf597d2ebd88e8275d7ac78b09d68ce4">More...</a><br /></td></tr>
 <tr class="separator:adf597d2ebd88e8275d7ac78b09d68ce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0effbd955454ab1beec9940cd6631dba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParseTree.html#a0effbd955454ab1beec9940cd6631dba">setRightNode</a> (<a class="el" href="classParseTree.html">ParseTree</a> *node)</td></tr>
 <tr class="memdesc:a0effbd955454ab1beec9940cd6631dba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the right node of a given node.  <a href="classParseTree.html#a0effbd955454ab1beec9940cd6631dba">More...</a><br /></td></tr>
 <tr class="separator:a0effbd955454ab1beec9940cd6631dba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c0dd4173a68c9f9f8aa13fae399f4b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParseTree.html#a7c0dd4173a68c9f9f8aa13fae399f4b0">printParseTree</a> (const std::string &amp;prefix, <a class="el" href="classParseTree.html">ParseTree</a> *node, bool isLeft)</td></tr>
+<tr class="memdesc:a7c0dd4173a68c9f9f8aa13fae399f4b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the binary tree.  <a href="classParseTree.html#a7c0dd4173a68c9f9f8aa13fae399f4b0">More...</a><br /></td></tr>
+<tr class="separator:a7c0dd4173a68c9f9f8aa13fae399f4b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a434c3422fae323882805bd4109f06ba0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParseTree.html#a434c3422fae323882805bd4109f06ba0">inOrderTraversal</a> (<a class="el" href="classParseTree.html">ParseTree</a> *nodePtr, std::string *infixFormulaPtr)</td></tr>
+<tr class="memdesc:a434c3422fae323882805bd4109f06ba0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility method which traverses the tree in in-order manner.  <a href="classParseTree.html#a434c3422fae323882805bd4109f06ba0">More...</a><br /></td></tr>
+<tr class="separator:a434c3422fae323882805bd4109f06ba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -182,6 +198,72 @@ char&#160;</td><td class="memItemRight" valign="bottom"><b>value</b> {}</td></tr
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa09112584a4aa46f867f38fe48179954" name="aa09112584a4aa46f867f38fe48179954"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa09112584a4aa46f867f38fe48179954">&#9670;&nbsp;</a></span>getHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ParseTree::getHeight </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classParseTree.html">ParseTree</a> *&#160;</td>
+          <td class="paramname"><em>binaryTree</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculate the height of the binary tree recursively. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">binaryTree</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classParseTree_aa09112584a4aa46f867f38fe48179954_cgraph.svg" width="399" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ad2561b779306154ebc3527b0ee1bb855" name="ad2561b779306154ebc3527b0ee1bb855"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2561b779306154ebc3527b0ee1bb855">&#9670;&nbsp;</a></span>getInfixExpression()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ParseTree::getInfixExpression </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classParseTree.html">ParseTree</a> *&#160;</td>
+          <td class="paramname"><em>nodePtr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Traverses the parse tree and return the infix formula. </p>
+<p >Uses <a class="el" href="classParseTree.html#a434c3422fae323882805bd4109f06ba0" title="Utility method which traverses the tree in in-order manner.">inOrderTraversal</a> to traverse </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nodePtr</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::string infixFormula </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classParseTree_ad2561b779306154ebc3527b0ee1bb855_cgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
 <a id="ae1cb6829644917b9437f28a08b1e60a1" name="ae1cb6829644917b9437f28a08b1e60a1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae1cb6829644917b9437f28a08b1e60a1">&#9670;&nbsp;</a></span>getLeftNode()</h2>
 
@@ -256,6 +338,107 @@ char&#160;</td><td class="memItemRight" valign="bottom"><b>value</b> {}</td></tr
 
 </div>
 </div>
+<a id="a434c3422fae323882805bd4109f06ba0" name="a434c3422fae323882805bd4109f06ba0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a434c3422fae323882805bd4109f06ba0">&#9670;&nbsp;</a></span>inOrderTraversal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ParseTree::inOrderTraversal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classParseTree.html">ParseTree</a> *&#160;</td>
+          <td class="paramname"><em>nodePtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>infixFormulaPtr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Utility method which traverses the tree in in-order manner. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nodePtr</td><td></td></tr>
+    <tr><td class="paramname">infixFormulaPtr</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classParseTree_a434c3422fae323882805bd4109f06ba0_cgraph.svg" width="443" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a7c0dd4173a68c9f9f8aa13fae399f4b0" name="a7c0dd4173a68c9f9f8aa13fae399f4b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c0dd4173a68c9f9f8aa13fae399f4b0">&#9670;&nbsp;</a></span>printParseTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ParseTree::printParseTree </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>prefix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classParseTree.html">ParseTree</a> *&#160;</td>
+          <td class="paramname"><em>node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isLeft</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Prints the binary tree. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prefix</td><td></td></tr>
+    <tr><td class="paramname">node</td><td></td></tr>
+    <tr><td class="paramname">isLeft</td><td>boolean value to identify left or right nodes </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classParseTree_a7c0dd4173a68c9f9f8aa13fae399f4b0_cgraph.svg" width="428" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
 <a id="adf597d2ebd88e8275d7ac78b09d68ce4" name="adf597d2ebd88e8275d7ac78b09d68ce4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adf597d2ebd88e8275d7ac78b09d68ce4">&#9670;&nbsp;</a></span>setLeftNode()</h2>
 
@@ -309,8 +492,8 @@ char&#160;</td><td class="memItemRight" valign="bottom"><b>value</b> {}</td></tr
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/<a class="el" href="tree_8h_source.html">tree.h</a></li>
-<li>src/<a class="el" href="tree_8cpp.html">tree.cpp</a></li>
+<li>include/<a class="el" href="parsetree_8h_source.html">parsetree.h</a></li>
+<li>src/<a class="el" href="parsetree_8cpp.html">parsetree.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
