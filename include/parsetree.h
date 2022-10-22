@@ -1,6 +1,6 @@
 /*!
- * @file tree.h
- * @brief Header file for tree
+ * @file parsetree.h
+ * @brief Header file for parse tree
  * @date 21-10-2022
  *
  * @copyright Copyright (c) 2022
@@ -39,6 +39,21 @@ class ParseTree {
    */
   ParseTree *rightNode{};
 
+  // Task 3
+  /*!
+   * @brief Utility method which traverses the tree in in-order manner
+   *
+   * @param nodePtr
+   * @param infixFormulaPtr
+   */
+  void inOrderTraversal(ParseTree *nodePtr, std::string *infixFormulaPtr) {
+    if (nodePtr->getLeftNode(nodePtr) != nullptr)
+      inOrderTraversal(nodePtr->getLeftNode(nodePtr), infixFormulaPtr);
+    infixFormulaPtr->push_back(nodePtr->getValue());
+    if (nodePtr->getRightNode(nodePtr) != nullptr)
+      inOrderTraversal(nodePtr->getRightNode(nodePtr), infixFormulaPtr);
+  }
+
  public:
   ParseTree(char character);
   ~ParseTree();
@@ -47,30 +62,13 @@ class ParseTree {
   char getValue();
   ParseTree *getLeftNode(ParseTree *node);
   ParseTree *getRightNode(ParseTree *node);
+  int getHeight(ParseTree *binaryTree);
+  std::string getInfixExpression(ParseTree *nodePtr);
 
   // Setters
   void setLeftNode(ParseTree *node);
   void setRightNode(ParseTree *node);
+
+  // Misc
+  void printParseTree(const std::string &prefix, ParseTree *node, bool isLeft);
 };
-
-// Functions related to tasks
-
-// Task 2
-ParseTree *createParseTree(std::string::iterator *formulaStartPtr,
-                           std::string::iterator formulaEndPtr);
-ParseTree *prefixToParseTree(std::string prefixFormula);
-void printBinaryParseTree(const std::string &prefix, ParseTree *node,
-                          bool isLeft);
-
-// Task 3
-void inOrderTraversal(ParseTree *nodePtr, std::string *infixFormulaPtr);
-std::string parseTreeToInfix(ParseTree *nodePtr);
-
-// Task 4
-long long int getNodeHeight(ParseTree *node);
-long long int getBinaryTreeHeight(ParseTree *binaryTree);
-
-// Task 5
-bool getNodeTruthValue(ParseTree *nodePtr,
-                       std::unordered_map<char, bool> *hashPtr);
-bool evaluateTreeTruthValue(ParseTree *nodePtr);

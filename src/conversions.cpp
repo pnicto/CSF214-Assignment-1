@@ -66,3 +66,20 @@ std::string infixToPrefix(std::string infixFormula) {
 
   return prefixFormula;
 }
+
+// Task 2
+
+/*!
+ * @brief Takes in a prefix formula and converts it into a rooted
+ * binary parse tree
+ *
+ * @param prefixFormula
+ * @return ParseTree*
+ */
+ParseTree *prefixToParseTree(std::string prefixFormula) {
+  std::string::iterator characterPtr = prefixFormula.begin();
+  std::string::iterator endPtr = prefixFormula.end();
+  ParseTree *parseTree = createParseTree(&characterPtr, endPtr);
+  return parseTree;
+}
+
