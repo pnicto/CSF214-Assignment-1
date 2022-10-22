@@ -10,7 +10,4 @@
 
 #include <iostream>
 
-#include "conversions.h"
-#include "parsetree.h"
-
 int main();

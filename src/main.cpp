@@ -9,6 +9,9 @@
 
 #include "../include/main.h"
 
+#include "../include/conversions.h"
+#include "../include/parsetree.h"
+
 /*!
  * @brief Where the tasks are run
  * @details Takes user input for infix formula and calls respective functions
