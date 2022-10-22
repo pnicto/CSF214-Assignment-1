@@ -149,6 +149,7 @@ void printBinaryParseTree(const std::string &prefix, ParseTree *node,
  * @brief Utility method which traverses the tree in in-order manner
  *
  * @param nodePtr
+ * @param infixFormulaPtr
  */
 void inOrderTraversal(ParseTree *nodePtr, std::string *infixFormulaPtr) {
   if (nodePtr->getLeftNode(nodePtr) != nullptr)
