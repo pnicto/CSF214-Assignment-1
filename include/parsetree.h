@@ -54,6 +54,7 @@ class ParseTree {
       inOrderTraversal(nodePtr->getRightNode(nodePtr), infixFormulaPtr);
   }
 
+
  public:
   ParseTree(char character);
   ~ParseTree();
@@ -72,3 +73,4 @@ class ParseTree {
   // Misc
   void printParseTree(const std::string &prefix, ParseTree *node, bool isLeft);
 };
+
