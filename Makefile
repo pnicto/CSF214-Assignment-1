@@ -7,7 +7,7 @@ OBJ      := $(patsubst src/%.cpp,build/%.o,$(CPPFILES))
 MAKE_DIR = @mkdir -p $(@D)
 
 CFLAGS = -std=c++20         \
-		 -pg                \
+		 -g                 \
 		 -Wall              \
 		 -Wextra            \
 		 -Werror            \
@@ -34,7 +34,7 @@ build/%.o: src/%.cpp include/%.h
 
 
 $(EXECUTABLE): $(OBJ)
-	$(LD) $(OBJ) -pg -o $@
+	$(LD) $(OBJ) -g -o $@
 
 clean:
 	rm -rf $(EXECUTABLE_WIN) $(EXECUTABLE) logs/*

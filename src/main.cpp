@@ -27,15 +27,15 @@ int main() {
 
   // Task 1
   std::string prefixFormula = infixToPrefix(infixFormula);
-  // std::cout << "Prefix Formula: " << prefixFormula << '\n';
+  std::cout << "Prefix Formula: " << prefixFormula << '\n';
 
   // Task 2
   ParseTree* binaryTree = prefixToParseTree(prefixFormula);
-  // printBinaryParseTree("", binaryTree, true);
+  printBinaryParseTree("", binaryTree, true);
 
   // Task 3
   std::string infixExpression = parseTreeToInfix(binaryTree);
-  // std::cout << "Infix Expression:" << infixExpression << '\n';
+  std::cout << "Infix Expression:" << infixExpression << '\n';
 
   // Task 4
   long long int height = getBinaryTreeHeight(binaryTree);
