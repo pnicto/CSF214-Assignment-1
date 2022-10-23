@@ -19,10 +19,14 @@
  */
 ParseTree *createParseTree(std::string::iterator *formulaStartPtr,
                            std::string::iterator formulaEndPtr) {
+  // Make previous node a leaf if the end of the prefix expression has been
+  // reached
   if (*formulaStartPtr == formulaEndPtr) return nullptr;
 
   ParseTree *node = new ParseTree{**formulaStartPtr};
 
+  // If the character is one of the three binary operators, they each have
+  // non-null left and right nodes
   switch (*((*formulaStartPtr)++)) {
     case '+':
     case '*':
@@ -30,9 +34,13 @@ ParseTree *createParseTree(std::string::iterator *formulaStartPtr,
       node->setLeftNode(createParseTree(formulaStartPtr, formulaEndPtr));
       node->setRightNode(createParseTree(formulaStartPtr, formulaEndPtr));
       break;
+      // In case of the negation operator, the left node remains null, and only
+      // the right one has a value
     case '~':
       node->setRightNode(createParseTree(formulaStartPtr, formulaEndPtr));
       break;
+      // All other characters are assumed to be propositional atoms, and both
+      // the left and right nodes are null so they form leaves
     default:
       break;
   }
@@ -52,24 +60,36 @@ ParseTree *createParseTree(std::string::iterator *formulaStartPtr,
 bool getNodeTruthValue(ParseTree *nodePtr,
                        std::unordered_map<char, bool> *hashPtr) {
   switch (nodePtr->getValue()) {
+    // For the disjunction operator, returns 'true' if at least one of
+    // its operands return 'true'
     case '+':
       return (getNodeTruthValue(nodePtr->getLeftNode(nodePtr), hashPtr) ||
               getNodeTruthValue(nodePtr->getRightNode(nodePtr), hashPtr));
       break;
+      // For the conjunction operator, returns 'true' only if both of its
+      // operands return 'true'
     case '*':
       return (getNodeTruthValue(nodePtr->getLeftNode(nodePtr), hashPtr) &&
               getNodeTruthValue(nodePtr->getRightNode(nodePtr), hashPtr));
       break;
+      // For the implication operator, returns 'true' if either the hypothesis
+      // is 'false' or the conclusion is 'true'
     case '>':
       return (!getNodeTruthValue(nodePtr->getLeftNode(nodePtr), hashPtr) ||
               getNodeTruthValue(nodePtr->getRightNode(nodePtr), hashPtr));
       break;
+      // For the negation operator, returns the opposite of the operand's truth
+      // value
     case '~':
       return (!getNodeTruthValue(nodePtr->getRightNode(nodePtr), hashPtr));
       break;
     default:
+      // If truth value of propositional atom has already been entered by the
+      // user (it exists in the hashmap), it is used
       if ((*hashPtr).find(nodePtr->getValue()) != (*hashPtr).end())
         return (*hashPtr)[nodePtr->getValue()];
+      // If truth value of propositional atom is unknown, the user is prompted
+      // to enter it, and the value is stored in a hashmap for future use
       else {
         char truthVal{};
         std::cout

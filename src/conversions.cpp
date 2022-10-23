@@ -82,4 +82,3 @@ ParseTree *prefixToParseTree(std::string prefixFormula) {
   ParseTree *parseTree = createParseTree(&characterPtr, endPtr);
   return parseTree;
 }
-

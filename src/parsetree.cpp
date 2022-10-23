@@ -85,8 +85,12 @@ void ParseTree::printParseTree(const std::string &prefix, ParseTree *node,
                                bool isLeft) {
   if (node != nullptr) {
     std::cout << prefix;
+    // Prints the '├' character if the node being printed is the left node, and
+    // the '└' character if it's the right node
     std::cout << (isLeft ? "├──" : "└──");
     std::cout << node->getValue() << std::endl;
+    // Recursively adds the characters to be printed in every line before the
+    // current node's value, inside the 'prefix' variable
     printParseTree(prefix + (isLeft ? "│   " : "    "), node->getLeftNode(node),
                    true);
     printParseTree(prefix + (isLeft ? "│   " : "    "),
@@ -115,6 +119,8 @@ std::string ParseTree::getInfixExpression(ParseTree *nodePtr) {
  */
 int ParseTree::getHeight(ParseTree *binaryTree) {
   if (binaryTree == nullptr) return 0;
+  // Recursively calls the function on each node of the tree, returning 1 + the
+  // larger of the height values returned by its left and right nodes
   return 1 + std::max<int>(getHeight(binaryTree->getLeftNode(binaryTree)),
                            getHeight(binaryTree->getRightNode(binaryTree)));
 }
