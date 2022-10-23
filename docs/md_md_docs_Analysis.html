@@ -107,15 +107,17 @@ Specifications</h3>
 </p>
 <h3><a class="anchor" id="autotoc_md2"></a>
 Time taken to run</h3>
-<p >real 0m1.443s<br  />
- user 0m1.401s<br  />
- sys 0m0.037s<br  />
+<p ><b>real</b> 0m1.443s<br  />
+ <b>user</b> 0m1.401s<br  />
+ <b>sys</b> 0m0.037s<br  />
 </p>
 <p ><b>real</b> : wall clock time - time from start to finish of the call. This is all elapsed time including time slices used by other processes and time the process spends blocked (for example if it is waiting for I/O to complete).</p>
 <p ><b>user</b> : amount of CPU time spent in user-mode code (outside the kernel) within the process. This is only actual CPU time used in executing the process. Other processes and time the process spends blocked do not count towards this figure.</p>
 <p ><b>sys</b> : amount of CPU time spent in the kernel within the process. This means executing CPU time spent in system calls within the kernel, as opposed to library code, which is still running in user-space. Like 'user', this is only CPU time used by the process. See below for a brief description of kernel mode (also known as 'supervisor' mode) and the system call mechanism.</p>
 <h2><a class="anchor" id="autotoc_md3"></a>
 Gprof profiling</h2>
+<p >Preferably view the following data as a txt file for convenience they are <a href="https://pastebin.com/3PNDXPVD">linked</a> for ease of access.</p>
+<p >We have represented the data for functions we have created/used, removing the ones which are related to the C++ API.</p>
 <h3><a class="anchor" id="autotoc_md4"></a>
 Flat Profile</h3>
 <table class="markdownTable">
@@ -128,7 +130,7 @@ Flat Profile</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">5.56   </td><td class="markdownTableBodyNone">0.14   </td><td class="markdownTableBodyNone">0.01   </td><td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">5.00   </td><td class="markdownTableBodyNone">24.64   </td><td class="markdownTableBodyNone">void std::__reverse&lt;__gnu_cxx::__normal_iterator&lt;char*, std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::random_access_iterator_tag)    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">5.56   </td><td class="markdownTableBodyNone">0.15   </td><td class="markdownTableBodyNone">0.01   </td><td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">10.00   </td><td class="markdownTableBodyNone">19.90   </td><td class="markdownTableBodyNone">ParseTree::inOrderTraversal(ParseTree*, std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;*)    </td></tr>
+<td class="markdownTableBodyNone">5.56   </td><td class="markdownTableBodyNone">0.15   </td><td class="markdownTableBodyNone">0.01   </td><td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">10.00   </td><td class="markdownTableBodyNone">19.90   </td><td class="markdownTableBodyNone">#inOrderTraversal(ParseTree*, std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;*)    </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">5.56   </td><td class="markdownTableBodyNone">0.16   </td><td class="markdownTableBodyNone">0.01   </td><td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">10.00   </td><td class="markdownTableBodyNone">10.00   </td><td class="markdownTableBodyNone"><a class="el" href="classParseTree.html#a4ad1cfc7324e0811df05c0fc2b9dfeff" title="Destroy the Parse Tree object.">ParseTree::~ParseTree()</a>    </td></tr>
 <tr class="markdownTableRowEven">
@@ -174,7 +176,35 @@ Call Graph</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">0.00   </td><td class="markdownTableBodyNone">0.00   </td><td class="markdownTableBodyNone">1/1   </td><td class="markdownTableBodyNone"><a class="el" href="utils_8cpp.html#a25643aa8241f085240d87644329f4656" title="Evaluates the truth value of a given parse tree.">evaluateTreeTruthValue(ParseTree*)</a> [47]    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">0.00   </td><td class="markdownTableBodyNone">0.00   </td><td class="markdownTableBodyNone">1/1   </td><td class="markdownTableBodyNone">getBinaryTreeHeight(ParseTree*) [184]   </td></tr>
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">0.00   </td><td class="markdownTableBodyNone">0.00   </td><td class="markdownTableBodyNone">1/1   </td><td class="markdownTableBodyNone">getBinaryTreeHeight(ParseTree*) [184]    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">0.00   </td><td class="markdownTableBodyNone">0.10   </td><td class="markdownTableBodyNone">1/1   </td><td class="markdownTableBodyNone">main [1]    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">[2]   </td><td class="markdownTableBodyNone">53.3   </td><td class="markdownTableBodyNone">0.00   </td><td class="markdownTableBodyNone">0.10   </td><td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">infixToPrefix(std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;) [2]    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">0.00   </td><td class="markdownTableBodyNone">0.05   </td><td class="markdownTableBodyNone">2/2   </td><td class="markdownTableBodyNone">void std::reverse&lt;__gnu_cxx::__normal_iterator&lt;char*, std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;) [5]    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">0.02   </td><td class="markdownTableBodyNone">0.00   </td><td class="markdownTableBodyNone">1333334/2000003   </td><td class="markdownTableBodyNone">bool __gnu_cxx::operator==&lt;char*, char*, std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; const&amp;, __gnu_cxx::__normal_iterator&lt;char*, std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; const&amp;) [7]    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">0.01   </td><td class="markdownTableBodyNone">0.00   </td><td class="markdownTableBodyNone">666666/666666   </td><td class="markdownTableBodyNone"><a class="el" href="classStack.html#af33d5c7126c13e5248851d69c68e6565" title="Adds the element to the stack.">Stack::push(char)</a> [22]    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">0.00   </td><td class="markdownTableBodyNone">0.01   </td><td class="markdownTableBodyNone">666667/666667   </td><td class="markdownTableBodyNone">std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::operator+=(char) [24]    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">0.01   </td><td class="markdownTableBodyNone">0.00   </td><td class="markdownTableBodyNone">1333333/2333332   </td><td class="markdownTableBodyNone">__gnu_cxx::__normal_iterator&lt;char*, std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;::operator++() [14]    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">0.00   </td><td class="markdownTableBodyNone">0.00   </td><td class="markdownTableBodyNone">1/2   </td><td class="markdownTableBodyNone">std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::basic_string() [36]    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">0.00   </td><td class="markdownTableBodyNone">0.00   </td><td class="markdownTableBodyNone">3/4   </td><td class="markdownTableBodyNone">std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::end() [49]    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">0.00   </td><td class="markdownTableBodyNone">0.00   </td><td class="markdownTableBodyNone">3/4   </td><td class="markdownTableBodyNone">std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::begin() [50]    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">0.00   </td><td class="markdownTableBodyNone">0.00   </td><td class="markdownTableBodyNone">1333333/4666665   </td><td class="markdownTableBodyNone">__gnu_cxx::__normal_iterator&lt;char*, std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;::operator*() const [59]    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">0.00   </td><td class="markdownTableBodyNone">0.00   </td><td class="markdownTableBodyNone">666666/666666   </td><td class="markdownTableBodyNone"><a class="el" href="classStack.html#a9fb8c5af08b260d76c4ad64ceae54d58" title="Removes the element at the top of the stack and returns it.">Stack::pop()</a> [71]    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">0.00   </td><td class="markdownTableBodyNone">0.00   </td><td class="markdownTableBodyNone">1/1   </td><td class="markdownTableBodyNone"><a class="el" href="classStack.html#a14cd1cba325bead4ff0a91bc6eb0f6f5" title="Construct a new Stack object.">Stack::Stack()</a> [189]    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">0.00   </td><td class="markdownTableBodyNone">0.00   </td><td class="markdownTableBodyNone">1/1   </td><td class="markdownTableBodyNone"><a class="el" href="classStack.html#a40bd5dff912f0e5290777c4b46d17809" title="Destroy the Stack object.">Stack::~Stack()</a> [190]   </td></tr>
 </table>
 <p >Here is what the fields in each line mean:</p>
 <p ><b>% time</b> This is the percentage of the total execution time your program spent in this function.</p>
