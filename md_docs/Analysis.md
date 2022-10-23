@@ -24,9 +24,10 @@ GPU: Intel CometLake-U GT2 [UHD Graphics]<br>
 
 ### Gprof profiling
 
-Preferably view the following data as a txt file for convenience they are [linked](https://pastebin.com/3PNDXPVD) for ease of access.
+Preferably view the following data as a txt file for convenience they are [linked](https://pastebin.com/3PNDXPVD) for ease of access and complete log.
 
-We have represented the data for functions we have created/used, removing the ones which are related to the C++ API.
+We have represented the data for functions we have created/used, removing the ones which are related to the C++ API. As for call graphs accounting the length of the log we couldn't show all of it.
+
 
 #### Flat Profile
 
@@ -150,3 +151,31 @@ This is the total amount of time propagated into this function by its children.
 | 36  | 869,518,190 | 27,945,384 | 18,244,222     | 9,701,162     | 0         |
 | 37  | 880,710,140 | 30,087,384 | 19,529,422     | 10,557,962    | 0         |
 | 38  | 890,131,445 | 30,359,344 | 19,692,598     | 10,666,746    | 0         |
+
+<br>
+
+```
+    MB
+29.72^                                                               ######
+     |                                                     :@@:::::::#     :
+     |                                                     :@@: :    #     :
+     |                                                     :@@: :    #     :
+     |                                                    ::@@: :    #     :
+     |                                                   :::@@: :    #     :
+     |                                                   :::@@: :    #     ::
+     |                                                  ::::@@: :    #     ::
+     |                                                  ::::@@: :    #     ::
+     |                                                 :::::@@: :    #     ::
+     |                                                 :::::@@: :    #     ::
+     |                                                 :::::@@: :    #     ::
+     |                                                ::::::@@: :    #     ::
+     |                                               :::::::@@: :    #     ::
+     |                                               :::::::@@: :    #     ::
+     |                                               :::::::@@: :    #     :::
+     |                                              ::::::::@@: :    #     :::
+     |                                    ::::::::::::::::::@@: :    #     :::
+     |            :::::::::::::::::::::::::        :::::::::@@: :    #     :::
+     |         ::::        :::::::  :     :        :::::::::@@: :    #     :::
+   0 +----------------------------------------------------------------------->Gi
+     0                                                                   1.098
+```

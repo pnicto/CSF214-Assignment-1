@@ -116,8 +116,8 @@ Time taken to run</h3>
 <p ><b>sys</b> : amount of CPU time spent in the kernel within the process. This means executing CPU time spent in system calls within the kernel, as opposed to library code, which is still running in user-space. Like 'user', this is only CPU time used by the process. See below for a brief description of kernel mode (also known as 'supervisor' mode) and the system call mechanism.</p>
 <h2><a class="anchor" id="autotoc_md3"></a>
 Gprof profiling</h2>
-<p >Preferably view the following data as a txt file for convenience they are <a href="https://pastebin.com/3PNDXPVD">linked</a> for ease of access.</p>
-<p >We have represented the data for functions we have created/used, removing the ones which are related to the C++ API.</p>
+<p >Preferably view the following data as a txt file for convenience they are <a href="https://pastebin.com/3PNDXPVD">linked</a> for ease of access and complete log.</p>
+<p >We have represented the data for functions we have created/used, removing the ones which are related to the C++ API. As for call graphs accounting the length of the log we couldn't show all of it.</p>
 <h3><a class="anchor" id="autotoc_md4"></a>
 Flat Profile</h3>
 <table class="markdownTable">
@@ -301,7 +301,32 @@ Massif heap profile</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">38   </td><td class="markdownTableBodyNone">890,131,445   </td><td class="markdownTableBodyNone">30,359,344   </td><td class="markdownTableBodyNone">19,692,598   </td><td class="markdownTableBodyNone">10,666,746   </td><td class="markdownTableBodyNone">0   </td></tr>
 </table>
-</div></div><!-- contents -->
+<p ><br  />
+</p>
+<div class="fragment"><div class="line">    MB</div>
+<div class="line">29.72^                                                               ######</div>
+<div class="line">     |                                                     :@@:::::::#     :</div>
+<div class="line">     |                                                     :@@: :    #     :</div>
+<div class="line">     |                                                     :@@: :    #     :</div>
+<div class="line">     |                                                    ::@@: :    #     :</div>
+<div class="line">     |                                                   :::@@: :    #     :</div>
+<div class="line">     |                                                   :::@@: :    #     ::</div>
+<div class="line">     |                                                  ::::@@: :    #     ::</div>
+<div class="line">     |                                                  ::::@@: :    #     ::</div>
+<div class="line">     |                                                 :::::@@: :    #     ::</div>
+<div class="line">     |                                                 :::::@@: :    #     ::</div>
+<div class="line">     |                                                 :::::@@: :    #     ::</div>
+<div class="line">     |                                                ::::::@@: :    #     ::</div>
+<div class="line">     |                                               :::::::@@: :    #     ::</div>
+<div class="line">     |                                               :::::::@@: :    #     ::</div>
+<div class="line">     |                                               :::::::@@: :    #     :::</div>
+<div class="line">     |                                              ::::::::@@: :    #     :::</div>
+<div class="line">     |                                    ::::::::::::::::::@@: :    #     :::</div>
+<div class="line">     |            :::::::::::::::::::::::::        :::::::::@@: :    #     :::</div>
+<div class="line">     |         ::::        :::::::  :     :        :::::::::@@: :    #     :::</div>
+<div class="line">   0 +-----------------------------------------------------------------------&gt;Gi</div>
+<div class="line">     0                                                                   1.098</div>
+</div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->
