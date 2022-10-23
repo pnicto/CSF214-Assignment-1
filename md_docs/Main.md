@@ -13,10 +13,16 @@
   - <a href="./files.html">File List</a>
   - <a href="./globals.html">File Members</a>
 
-#### Instructions to run
+#### Instructions to run and compile
 
-Run `make all` to compile everything<br>
-Run `make run` to run the program<br>
+Run to compile everything
+```
+make all
+```
+Run to run the program
+```
+make run
+```
 
 #### Team members
 
