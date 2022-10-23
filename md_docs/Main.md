@@ -13,6 +13,11 @@
   - <a href="./files.html">File List</a>
   - <a href="./globals.html">File Members</a>
 
+#### Instructions to run
+
+Run `make all` to compile everything<br>
+Run `make run` to run the program<br>
+
 #### Team members
 
 - Anurav Garg 2021A7PS2782H
