@@ -1,20 +1,43 @@
-import string
-import os
 import random
 
-operators = ["+", "*", ">"]
+size = 100
 
-size = 25000
+lowercase_letters = [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z",
+]
 
-dir = os.path.dirname(os.path.realpath(_file_))
+infix_expression = ""
+for i in range(size):
+    infix_expression += "("
+    infix_expression += random.choice(lowercase_letters)
+    infix_expression += random.choice(["+", "*", ">"])
+infix_expression += random.choice(lowercase_letters)
+for i in range(size):
+    infix_expression += ")"
 
-with open(dir + "samples/infixTestCase.txt", "w") as fh:
-    infix = ""
-    for i in range(size):
-        infix += "("
-        infix += random.choice(string.ascii_lowercase)
-        infix += random.choice(operators)
-    infix += random.choice(string.ascii_lowercase)
-    for i in range(size):
-        infix += ")"
-    fh.write(infix[1:-1])
+print(infix)
