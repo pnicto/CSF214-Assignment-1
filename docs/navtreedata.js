@@ -27,7 +27,7 @@ var NAVTREE =
   [ "CS F214 Assignment 1", "index.html", [
     [ "Analysis", "md_md_docs_Analysis.html", null ],
     [ "Experiences", "md_md_docs_Experiences.html", null ],
-    [ "Project Structure", "md_md_docs_Project_Strcture.html", null ],
+    [ "Project Structure", "md_md_docs_Project_Structure.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
