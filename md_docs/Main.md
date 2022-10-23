@@ -3,6 +3,9 @@
 #### Table of Contents
 - <a href="./index.html">Main page</a>
 - <a href="./pages.html">Related pages</a>
+   - <a href="./md_md_docs_Analysis.html">Analysis</a>
+   - <a href="./md_md_docs_Experiences.html">Experiences</a>
+   - <a href="./md_md_docs_Project_Structure.html">Project Structure</a>
 - Classes
   - <a href="./annotated.html">Class List</a>
   - <a href="./functions.html">Class Members</a>

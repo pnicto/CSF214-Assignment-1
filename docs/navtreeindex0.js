@@ -51,7 +51,7 @@ var NAVTREEINDEX0 =
 "main_8h_source.html":[4,0,0,1],
 "md_md_docs_Analysis.html":[0],
 "md_md_docs_Experiences.html":[1],
-"md_md_docs_Project_Strcture.html":[2],
+"md_md_docs_Project_Structure.html":[2],
 "pages.html":[],
 "parsetree_8cpp.html":[4,0,1,2],
 "parsetree_8h.html":[4,0,0,2],
