@@ -1,19 +1,20 @@
+import string
+import os
 import random
 
-def expressionGenerator(n):
-  vars = [x for x in 'abcdefghijklmnopqrstuvwxyz']
+operators = ["+", "*", ">"]
 
-  choice = random.random()
-  if (choice < (0.05 + n)):
-    return random.choice(vars)
-  elif (choice < 0.25):
-    return "(~" + expressionGenerator(n+0.05) + ")"
-  elif (choice < 0.55):
-    return "(" + expressionGenerator(n+0.05) + "+" + expressionGenerator(n+0.05) + ")"
-  elif (choice < 0.75):
-    return "(" + expressionGenerator(n+0.05) + "*" + expressionGenerator(n+0.05) + ")"
-  else:
-    return "(" + expressionGenerator(n+0.05) + ">" + expressionGenerator(n+0.05) + ")"
+size = 25000
 
-print(expressionGenerator(0))
+dir = os.path.dirname(os.path.realpath(_file_))
 
+with open(dir + "samples/infixTestCase.txt", "w") as fh:
+    infix = ""
+    for i in range(size):
+        infix += "("
+        infix += random.choice(string.ascii_lowercase)
+        infix += random.choice(operators)
+    infix += random.choice(string.ascii_lowercase)
+    for i in range(size):
+        infix += ")"
+    fh.write(infix[1:-1])
