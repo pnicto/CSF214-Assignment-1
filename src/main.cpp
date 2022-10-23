@@ -20,6 +20,9 @@ int main() {
   std::string infixFormula;
 
   // Take user input for infix formula
+  std::cout << "Enter a well parenthesized propositional logic formula:"
+            << '\n';
+  std::cout << "Example (~p) ,(p>q), ((p+q)>(~r))" << '\n';
   std::cin >> infixFormula;
 
   // Task 1
