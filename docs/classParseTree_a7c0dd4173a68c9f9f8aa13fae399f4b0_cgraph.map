@@ -1,6 +1,6 @@
 <map id="ParseTree::printParseTree" name="ParseTree::printParseTree">
-<area shape="rect" id="node1" title="Prints the binary tree." alt="" coords="5,56,192,83"/>
-<area shape="rect" id="node2" href="$classParseTree.html#ae1cb6829644917b9437f28a08b1e60a1" title="Get the left node when a node is given." alt="" coords="245,5,418,32"/>
-<area shape="rect" id="node3" href="$classParseTree.html#a101193b71bc7e02d051dd73e6f079aa1" title="Get the right node when a node is given." alt="" coords="240,56,423,83"/>
-<area shape="rect" id="node4" href="$classParseTree.html#a816af779bb7d32b6ab6e513cf69648a4" title="Get the value of the node." alt="" coords="256,107,407,133"/>
+<area shape="rect" id="node1" title="Prints the binary tree." alt="" coords="5,55,192,80"/>
+<area shape="rect" id="node2" href="$classParseTree.html#ae1cb6829644917b9437f28a08b1e60a1" title="Get the left node when a node is given." alt="" coords="245,5,418,31"/>
+<area shape="rect" id="node3" href="$classParseTree.html#a101193b71bc7e02d051dd73e6f079aa1" title="Get the right node when a node is given." alt="" coords="240,55,423,80"/>
+<area shape="rect" id="node4" href="$classParseTree.html#a816af779bb7d32b6ab6e513cf69648a4" title="Get the value of the node." alt="" coords="256,104,407,129"/>
 </map>

@@ -1,8 +1,8 @@
 <map id="include/stack.h" name="include/stack.h">
-<area shape="rect" id="node1" title="Header file for stack." alt="" coords="174,5,294,32"/>
-<area shape="rect" id="node2" href="$conversions_8h.html" title="Header file for conversions." alt="" coords="62,80,225,107"/>
-<area shape="rect" id="node6" href="$stack_8cpp.html" title="Source file for stack." alt="" coords="273,80,379,107"/>
-<area shape="rect" id="node3" href="$main_8h.html" title="Header file for main." alt="" coords="5,155,124,181"/>
-<area shape="rect" id="node5" href="$conversions_8cpp.html" title="Source file for conversions." alt="" coords="148,155,299,181"/>
-<area shape="rect" id="node4" href="$main_8cpp.html" title="Source file for main." alt="" coords="12,229,117,256"/>
+<area shape="rect" id="node1" title="Header file for stack." alt="" coords="174,5,294,31"/>
+<area shape="rect" id="node2" href="$conversions_8h.html" title="Header file for conversions." alt="" coords="62,79,225,104"/>
+<area shape="rect" id="node6" href="$stack_8cpp.html" title="Source file for stack." alt="" coords="273,79,379,104"/>
+<area shape="rect" id="node3" href="$main_8h.html" title="Header file for main." alt="" coords="5,152,124,177"/>
+<area shape="rect" id="node5" href="$conversions_8cpp.html" title="Source file for conversions." alt="" coords="148,152,299,177"/>
+<area shape="rect" id="node4" href="$main_8cpp.html" title="Source file for main." alt="" coords="12,225,117,251"/>
 </map>
