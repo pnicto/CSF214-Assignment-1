@@ -1275,6 +1275,7 @@ HTML_EXTRA_FILES       =
 # purple, and 360 is red again.
 # Minimum value: 0, maximum value: 359, default value: 220.
 # This tag requires that the tag GENERATE_HTML is set to YES.
+HTML_COLORSTYLE = LIGHT
 
 HTML_COLORSTYLE_HUE    = 226
 
