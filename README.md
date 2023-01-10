@@ -1,5 +1,7 @@
 # CS F214 Assignment 1
 
+Assignment details in [here](assignment.pdf)
+
 #### Team members
 
 - Anurav Garg 2021A7PS2782H
